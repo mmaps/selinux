@@ -1,10 +1,372 @@
 {
+    "*": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 2
+    }, 
+    "-activity_service": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 1
+    }, 
+    "-adbd": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 4, 
+        "tgt_count": 1
+    }, 
+    "-apk_data_file": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 5
+    }, 
+    "-app_data_file": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 6
+    }, 
+    "-appdomain": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 6, 
+        "tgt_count": 10
+    }, 
+    "-asec_public_file": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 1
+    }, 
+    "-blkid_exec": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 2
+    }, 
+    "-bluetooth": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 14, 
+        "tgt_count": 4
+    }, 
+    "-contextmount_type": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 3
+    }, 
+    "-dalvikcache_data_file": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 6
+    }, 
+    "-debuggerd": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 1, 
+        "tgt_count": 1
+    }, 
+    "-dex2oat": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 2, 
+        "tgt_count": 0
+    }, 
+    "-display_service": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 1
+    }, 
+    "-dumpstate": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 5, 
+        "tgt_count": 1
+    }, 
+    "-exec_type": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 13
+    }, 
+    "-frp_block_device": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 1
+    }, 
+    "-fsck_exec": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 2
+    }, 
+    "-gatekeeper_service": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 2
+    }, 
+    "-gatekeeperd": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 1, 
+        "tgt_count": 0
+    }, 
+    "-healthd": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 1, 
+        "tgt_count": 2
+    }, 
+    "-init": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 34, 
+        "tgt_count": 4
+    }, 
+    "-init_exec": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 1
+    }, 
+    "-install_recovery": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 1, 
+        "tgt_count": 0
+    }, 
+    "-installd": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 8, 
+        "tgt_count": 0
+    }, 
+    "-isolated_app": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 16, 
+        "tgt_count": 8
+    }, 
+    "-kernel": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 8, 
+        "tgt_count": 2
+    }, 
+    "-keystore": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 4, 
+        "tgt_count": 1
+    }, 
+    "-keystore_data_file": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 4
+    }, 
+    "-kmem_device": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 1
+    }, 
+    "-logd_tmpfs": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 1
+    }, 
+    "-misc_logd_file": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 1
+    }, 
+    "-nfc": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 8, 
+        "tgt_count": 0
+    }, 
+    "-platform_app": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 10, 
+        "tgt_count": 0
+    }, 
+    "-priv_app": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 3, 
+        "tgt_count": 0
+    }, 
+    "-radio": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 6, 
+        "tgt_count": 0
+    }, 
+    "-recovery": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 13, 
+        "tgt_count": 3
+    }, 
+    "-rootfs": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 6
+    }, 
+    "-runas": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 1, 
+        "tgt_count": 0
+    }, 
+    "-sdcard_type": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 8
+    }, 
+    "-security_file": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 4
+    }, 
+    "-servicemanager": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 1, 
+        "tgt_count": 0
+    }, 
+    "-sgdisk_exec": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 1
+    }, 
+    "-shell": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 16, 
+        "tgt_count": 0
+    }, 
+    "-shell_data_file": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 4
+    }, 
+    "-shell_exec": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 2
+    }, 
+    "-system_app": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 13, 
+        "tgt_count": 1
+    }, 
+    "-system_data_file": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 5
+    }, 
+    "-system_file": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 12
+    }, 
+    "-system_server": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 13, 
+        "tgt_count": 1
+    }, 
+    "-tee": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 1, 
+        "tgt_count": 1
+    }, 
+    "-toolbox_exec": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 1
+    }, 
+    "-ueventd": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 5, 
+        "tgt_count": 3
+    }, 
+    "-uncrypt": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 3, 
+        "tgt_count": 1
+    }, 
+    "-untrusted_app": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 1, 
+        "tgt_count": 0
+    }, 
+    "-update_engine": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 1, 
+        "tgt_count": 0
+    }, 
+    "-vold": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 15, 
+        "tgt_count": 3
+    }, 
+    "-vold_data_file": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 4
+    }, 
+    "-watchdogd": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 1, 
+        "tgt_count": 2
+    }, 
+    "-zygote": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 6, 
+        "tgt_count": 0
+    }, 
     "DockObserver_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "IProxyService_service": {
         "aliases": [], 
@@ -12,14 +374,18 @@
             "system_api_service", 
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "ThermalObserver_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "accessibility_service": {
         "aliases": [], 
@@ -27,7 +393,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "account_service": {
         "aliases": [], 
@@ -35,7 +403,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "activity_service": {
         "aliases": [], 
@@ -43,27 +413,35 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "adb_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "adb_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "adb_keys_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 4
     }, 
     "adbd": {
         "aliases": [], 
@@ -71,20 +449,26 @@
             "domain_deprecated", 
             "domain", 
             "mlstrustedsubject"
-        ]
+        ], 
+        "src_count": 51, 
+        "tgt_count": 18
     }, 
     "adbd_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "alarm_device": {
         "aliases": [], 
         "attributes": [
             "dev_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 4
     }, 
     "alarm_service": {
         "aliases": [], 
@@ -92,7 +476,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "anr_data_file": {
         "aliases": [], 
@@ -100,21 +486,27 @@
             "file_type", 
             "data_file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 15
     }, 
     "apk_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 27
     }, 
     "apk_private_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 8
     }, 
     "apk_private_tmp_file": {
         "aliases": [], 
@@ -122,7 +514,9 @@
             "file_type", 
             "data_file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 17
     }, 
     "apk_tmp_file": {
         "aliases": [], 
@@ -130,7 +524,15 @@
             "file_type", 
             "data_file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 20
+    }, 
+    "app_api_service": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "app_data_file": {
         "aliases": [
@@ -140,7 +542,15 @@
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 36
+    }, 
+    "appdomain": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 271, 
+        "tgt_count": 66
     }, 
     "appops_service": {
         "aliases": [], 
@@ -148,7 +558,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "appwidget_service": {
         "aliases": [], 
@@ -156,7 +568,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "asec_apk_file": {
         "aliases": [], 
@@ -164,28 +578,36 @@
             "file_type", 
             "data_file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 13
     }, 
     "asec_image_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "asec_public_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "ashmem_device": {
         "aliases": [], 
         "attributes": [
             "dev_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "assetatlas_service": {
         "aliases": [], 
@@ -193,14 +615,18 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "atrace_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "audio_data_file": {
         "aliases": [
@@ -209,19 +635,25 @@
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "audio_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 8
     }, 
     "audio_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "audio_service": {
         "aliases": [], 
@@ -229,7 +661,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "backup_data_file": {
         "aliases": [], 
@@ -237,7 +671,9 @@
             "file_type", 
             "data_file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "backup_service": {
         "aliases": [], 
@@ -245,14 +681,18 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "battery_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "batterystats_service": {
         "aliases": [], 
@@ -260,67 +700,93 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "binder_device": {
         "aliases": [], 
         "attributes": [
             "dev_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
+    }, 
+    "binderservicedomain": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 18, 
+        "tgt_count": 18
     }, 
     "binfmt_miscfs": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "blkid": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 9, 
+        "tgt_count": 6
     }, 
     "blkid_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "blkid_untrusted": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 9, 
+        "tgt_count": 6
     }, 
     "block_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 18
     }, 
     "bluetooth": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 38, 
+        "tgt_count": 8
     }, 
     "bluetooth_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 11
     }, 
     "bluetooth_efs_file": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "bluetooth_manager_service": {
         "aliases": [], 
@@ -328,132 +794,178 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "bluetooth_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "bluetooth_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "bluetooth_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "bluetooth_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
+    }, 
+    "bluetoothdomain": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 2, 
+        "tgt_count": 1
     }, 
     "boot_block_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "bootanim": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 13, 
+        "tgt_count": 10
     }, 
     "bootanim_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "bootanim_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "bootchart_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 4
     }, 
     "boottrace_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "cache_backup_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 8
     }, 
     "cache_block_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "cache_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 23
     }, 
     "camera_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "camera_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "cameraproxy_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "cgroup": {
         "aliases": [], 
         "attributes": [
             "fs_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 15
     }, 
     "clatd": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 15, 
+        "tgt_count": 8
     }, 
     "clatd_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "clipboard_service": {
         "aliases": [], 
@@ -461,20 +973,26 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "commontime_management_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "config_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "connectivity_service": {
         "aliases": [], 
@@ -482,13 +1000,17 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "console_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "consumer_ir_service": {
         "aliases": [], 
@@ -496,7 +1018,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "content_service": {
         "aliases": [], 
@@ -504,13 +1028,23 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
+    }, 
+    "contextmount_type": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "coredump_file": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "country_detector_service": {
         "aliases": [], 
@@ -518,13 +1052,17 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "cpuctl_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "cpuinfo_service": {
         "aliases": [], 
@@ -532,74 +1070,104 @@
             "system_api_service", 
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "ctl_bootanim_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "ctl_bugreport_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "ctl_console_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "ctl_default_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "ctl_dhcp_pan_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "ctl_dumpstate_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "ctl_fuse_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "ctl_mdnsd_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "ctl_rildaemon_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "dalvik_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "dalvikcache_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 30
+    }, 
+    "data_file_type": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 8
     }, 
     "dbinfo_service": {
         "aliases": [], 
@@ -607,65 +1175,91 @@
             "system_api_service", 
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "debug_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "debugfs": {
         "aliases": [], 
         "attributes": [
             "fs_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 7
     }, 
     "debuggerd": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 30, 
+        "tgt_count": 8
     }, 
     "debuggerd_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "debuggerd_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "debuggerd_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "default_android_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "default_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
+    }, 
+    "dev_type": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 1, 
+        "tgt_count": 17
     }, 
     "device": {
         "aliases": [], 
         "attributes": [
             "dev_type", 
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 14
     }, 
     "device_policy_service": {
         "aliases": [], 
@@ -673,7 +1267,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "deviceidle_service": {
         "aliases": [], 
@@ -681,68 +1277,88 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "devicestoragemonitor_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "devpts": {
         "aliases": [], 
         "attributes": [
             "fs_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 16
     }, 
     "dex2oat": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 9, 
+        "tgt_count": 3
     }, 
     "dex2oat_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "dhcp": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 26, 
+        "tgt_count": 10
     }, 
     "dhcp_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "dhcp_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 4
     }, 
     "dhcp_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "dhcp_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "diskstats_service": {
         "aliases": [], 
@@ -750,7 +1366,9 @@
             "system_api_service", 
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "display_service": {
         "aliases": [], 
@@ -758,34 +1376,56 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "dm_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 10
     }, 
     "dnsmasq": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 14, 
+        "tgt_count": 6
     }, 
     "dnsmasq_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "dnsproxyd_socket": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
+    }, 
+    "domain": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 142, 
+        "tgt_count": 62
+    }, 
+    "domain_deprecated": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 55, 
+        "tgt_count": 0
     }, 
     "dreams_service": {
         "aliases": [], 
@@ -793,46 +1433,60 @@
             "system_api_service", 
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "drm_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 4
     }, 
     "drmserver": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 37, 
+        "tgt_count": 15
     }, 
     "drmserver_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "drmserver_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 9
     }, 
     "drmserver_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "drmserver_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "dropbox_service": {
         "aliases": [], 
@@ -840,7 +1494,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "dumpstate": {
         "aliases": [], 
@@ -848,32 +1504,42 @@
             "domain_deprecated", 
             "domain", 
             "mlstrustedsubject"
-        ]
+        ], 
+        "src_count": 59, 
+        "tgt_count": 31
     }, 
     "dumpstate_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "dumpstate_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "dumpstate_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "efs_file": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 14
     }, 
     "ethernet_service": {
         "aliases": [], 
@@ -881,19 +1547,37 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
+    }, 
+    "exec_type": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 10
     }, 
     "ffs_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
+    }, 
+    "file_type": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 3, 
+        "tgt_count": 32
     }, 
     "fingerprint_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "fingerprint_service": {
         "aliases": [], 
@@ -901,91 +1585,125 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "fingerprintd": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 15, 
+        "tgt_count": 13
     }, 
     "fingerprintd_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "fingerprintd_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "fingerprintd_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "fingerprintd_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "frp_block_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 8
+    }, 
+    "fs_type": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 2, 
+        "tgt_count": 29
     }, 
     "fsck": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 15, 
+        "tgt_count": 10
     }, 
     "fsck_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 7
     }, 
     "fsck_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "fsck_untrusted": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 9, 
+        "tgt_count": 6
     }, 
     "fscklogs": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 7
     }, 
     "full_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "functionfs": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "fuse": {
         "aliases": [
@@ -995,54 +1713,70 @@
             "fs_type", 
             "sdcard_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "fuse_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "fwmarkd_socket": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "gatekeeper_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "gatekeeper_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 4
     }, 
     "gatekeeperd": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 16, 
+        "tgt_count": 12
     }, 
     "gatekeeperd_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "gatekeeperd_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "gfxinfo_service": {
         "aliases": [], 
@@ -1050,65 +1784,85 @@
             "system_api_service", 
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "gps_control": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "gps_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "gps_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "gps_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "gpsd": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 13, 
+        "tgt_count": 6
     }, 
     "gpsd_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "gpsd_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "gpu_device": {
         "aliases": [], 
         "attributes": [
             "dev_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 15
     }, 
     "graphics_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 12
     }, 
     "graphicsstats_service": {
         "aliases": [], 
@@ -1116,40 +1870,52 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "hardware_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "hci_attach": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 7, 
+        "tgt_count": 3
     }, 
     "hci_attach_dev": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "hci_attach_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "hci_attach_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "hdmi_control_service": {
         "aliases": [], 
@@ -1157,20 +1923,26 @@
             "system_api_service", 
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "healthd": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 27, 
+        "tgt_count": 14
     }, 
     "healthd_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "heapdump_data_file": {
         "aliases": [], 
@@ -1178,53 +1950,69 @@
             "file_type", 
             "data_file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "hostapd": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 18, 
+        "tgt_count": 8
     }, 
     "hostapd_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "hw_random_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "i2c_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "idmap": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 5, 
+        "tgt_count": 3
     }, 
     "idmap_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "iio_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "imms_service": {
         "aliases": [], 
@@ -1232,7 +2020,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "init": {
         "aliases": [], 
@@ -1240,33 +2030,43 @@
             "domain_deprecated", 
             "domain", 
             "mlstrustedsubject"
-        ]
+        ], 
+        "src_count": 268, 
+        "tgt_count": 122
     }, 
     "init_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 7
     }, 
     "init_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "inotify": {
         "aliases": [], 
         "attributes": [
             "fs_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "input_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 10
     }, 
     "input_method_service": {
         "aliases": [], 
@@ -1274,7 +2074,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "input_service": {
         "aliases": [], 
@@ -1282,106 +2084,138 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "inputflinger": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 11, 
+        "tgt_count": 12
     }, 
     "inputflinger_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "inputflinger_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "inputflinger_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "install_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "install_recovery": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 13, 
+        "tgt_count": 4
     }, 
     "install_recovery_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "install_recovery_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "installd": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 54, 
+        "tgt_count": 9
     }, 
     "installd_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "installd_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "installd_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "ion_device": {
         "aliases": [], 
         "attributes": [
             "dev_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "isolated_app": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 13, 
+        "tgt_count": 1
     }, 
     "isolated_app_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "jobscheduler_service": {
         "aliases": [], 
@@ -1389,7 +2223,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "kernel": {
         "aliases": [], 
@@ -1397,71 +2233,93 @@
             "domain_deprecated", 
             "domain", 
             "mlstrustedsubject"
-        ]
+        ], 
+        "src_count": 25, 
+        "tgt_count": 56
     }, 
     "keychain_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 10
     }, 
     "keystore": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 41, 
+        "tgt_count": 37
     }, 
     "keystore_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 16
     }, 
     "keystore_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "keystore_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 11
     }, 
     "keystore_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "klog_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "kmem_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "kmsg_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "labeledfs": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "launcherapps_service": {
         "aliases": [], 
@@ -1469,7 +2327,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "lmkd": {
         "aliases": [], 
@@ -1477,26 +2337,34 @@
             "domain_deprecated", 
             "domain", 
             "mlstrustedsubject"
-        ]
+        ], 
+        "src_count": 15, 
+        "tgt_count": 8
     }, 
     "lmkd_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "lmkd_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "lmkd_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "location_service": {
         "aliases": [], 
@@ -1504,7 +2372,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "lock_settings_service": {
         "aliases": [], 
@@ -1512,21 +2382,27 @@
             "system_api_service", 
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "log_device": {
         "aliases": [], 
         "attributes": [
             "dev_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "logcat_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "logd": {
         "aliases": [], 
@@ -1534,59 +2410,77 @@
             "domain_deprecated", 
             "domain", 
             "mlstrustedsubject"
-        ]
+        ], 
+        "src_count": 21, 
+        "tgt_count": 19
     }, 
     "logd_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "logd_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "logd_socket": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "logd_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "logdr_socket": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "logdw_socket": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "loop_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "mdns_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "mdnsd": {
         "aliases": [], 
@@ -1594,34 +2488,44 @@
             "domain_deprecated", 
             "domain", 
             "mlstrustedsubject"
-        ]
+        ], 
+        "src_count": 3, 
+        "tgt_count": 4
     }, 
     "mdnsd_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "mdnsd_socket": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "mdnsd_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "media_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "media_projection_service": {
         "aliases": [], 
@@ -1629,7 +2533,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "media_router_service": {
         "aliases": [], 
@@ -1637,7 +2543,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "media_rw_data_file": {
         "aliases": [], 
@@ -1645,7 +2553,9 @@
             "file_type", 
             "data_file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 20
     }, 
     "media_session_service": {
         "aliases": [], 
@@ -1653,33 +2563,43 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "mediaserver": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 64, 
+        "tgt_count": 23
     }, 
     "mediaserver_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "mediaserver_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 9
     }, 
     "mediaserver_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "meminfo_service": {
         "aliases": [], 
@@ -1687,13 +2607,17 @@
             "system_api_service", 
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "metadata_block_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "method_trace_data_file": {
         "aliases": [], 
@@ -1701,7 +2625,9 @@
             "file_type", 
             "data_file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "midi_service": {
         "aliases": [], 
@@ -1709,50 +2635,72 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "misc_block_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "misc_logd_file": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "misc_user_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 8
+    }, 
+    "mlstrustedsubject": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "mnt_expand_file": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "mnt_media_rw_file": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 7
     }, 
     "mnt_media_rw_stub_file": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "mnt_user_file": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 12
     }, 
     "mount_service": {
         "aliases": [], 
@@ -1760,72 +2708,94 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "mqueue": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "mtd_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "mtp": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 11, 
+        "tgt_count": 10
     }, 
     "mtp_device": {
         "aliases": [], 
         "attributes": [
             "dev_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "mtp_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "mtp_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "mtpd_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "nativetest_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "net_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "net_radio_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 7
     }, 
     "netd": {
         "aliases": [], 
@@ -1833,32 +2803,48 @@
             "domain_deprecated", 
             "domain", 
             "mlstrustedsubject"
-        ]
+        ], 
+        "src_count": 57, 
+        "tgt_count": 45
     }, 
     "netd_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "netd_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "netd_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
+    }, 
+    "netdomain": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 13, 
+        "tgt_count": 5
     }, 
     "netif": {
         "aliases": [], 
         "attributes": [
             "netif_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "netpolicy_service": {
         "aliases": [], 
@@ -1866,7 +2852,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "netstats_service": {
         "aliases": [], 
@@ -1874,7 +2862,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "network_management_service": {
         "aliases": [], 
@@ -1882,7 +2872,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "network_score_service": {
         "aliases": [], 
@@ -1890,51 +2882,73 @@
             "system_api_service", 
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "nfc": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 18, 
+        "tgt_count": 0
     }, 
     "nfc_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 7
     }, 
     "nfc_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "nfc_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "nfc_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 4
     }, 
     "nfc_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "node": {
         "aliases": [], 
         "attributes": [
             "node_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
+    }, 
+    "node_type": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "notification_service": {
         "aliases": [], 
@@ -1942,28 +2956,36 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "null_device": {
         "aliases": [], 
         "attributes": [
             "dev_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "oemfs": {
         "aliases": [], 
         "attributes": [
             "contextmount_type", 
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 15
     }, 
     "owntty_device": {
         "aliases": [], 
         "attributes": [
             "dev_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "package_service": {
         "aliases": [], 
@@ -1971,13 +2993,17 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "pan_result_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "perfprofd_data_file": {
         "aliases": [], 
@@ -1985,14 +3011,18 @@
             "file_type", 
             "data_file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "perfprofd_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "permission_service": {
         "aliases": [], 
@@ -2000,13 +3030,17 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "persist_debug_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "persistent_data_block_service": {
         "aliases": [], 
@@ -2014,39 +3048,57 @@
             "system_api_service", 
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "pipefs": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "platform_app": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 23, 
+        "tgt_count": 0
     }, 
     "platform_app_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "pmsg_device": {
         "aliases": [], 
         "attributes": [
             "dev_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "port": {
         "aliases": [], 
         "attributes": [
             "port_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
+    }, 
+    "port_type": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "power_service": {
         "aliases": [], 
@@ -2054,33 +3106,43 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "powerctl_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "ppp": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 12, 
+        "tgt_count": 5
     }, 
     "ppp_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "ppp_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "print_service": {
         "aliases": [], 
@@ -2088,93 +3150,123 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "priv_app": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 32, 
+        "tgt_count": 1
     }, 
     "priv_app_devpts": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "priv_app_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "proc": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 9
     }, 
     "proc_bluetooth_writable": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "proc_cpuinfo": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "proc_drop_caches": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "proc_iomem": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "proc_net": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "proc_security": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "proc_sysrq": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 4
     }, 
     "proc_uid_cputime_removeuid": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "proc_uid_cputime_showstat": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "processinfo_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "procstats_service": {
         "aliases": [], 
@@ -2182,78 +3274,108 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "properties_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "property_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "property_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 63
+    }, 
+    "property_type": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 17
     }, 
     "pstorefs": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 12
     }, 
     "ptmx_device": {
         "aliases": [], 
         "attributes": [
             "dev_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "qtaguid_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 4
     }, 
     "qtaguid_proc": {
         "aliases": [], 
         "attributes": [
             "fs_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "racoon": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 19, 
+        "tgt_count": 14
     }, 
     "racoon_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "racoon_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "racoon_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "radio": {
         "aliases": [], 
@@ -2261,7 +3383,9 @@
             "domain_deprecated", 
             "domain", 
             "mlstrustedsubject"
-        ]
+        ], 
+        "src_count": 29, 
+        "tgt_count": 0
     }, 
     "radio_data_file": {
         "aliases": [], 
@@ -2269,57 +3393,75 @@
             "file_type", 
             "data_file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 14
     }, 
     "radio_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "radio_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "radio_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 7
     }, 
     "radio_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "ram_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "random_device": {
         "aliases": [], 
         "attributes": [
             "dev_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "recovery": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 2, 
+        "tgt_count": 0
     }, 
     "recovery_block_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 7
     }, 
     "registry_service": {
         "aliases": [], 
@@ -2327,20 +3469,26 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "resourcecache_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 11
     }, 
     "restorecon_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 4
     }, 
     "restrictions_service": {
         "aliases": [], 
@@ -2348,63 +3496,83 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "rild": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 42, 
+        "tgt_count": 13
     }, 
     "rild_debug_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "rild_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "rild_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "rild_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "root_block_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "rootfs": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 25
     }, 
     "rpmsg_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "rtc_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "rttmanager_service": {
         "aliases": [], 
@@ -2412,7 +3580,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "runas": {
         "aliases": [], 
@@ -2420,48 +3590,68 @@
             "domain_deprecated", 
             "domain", 
             "mlstrustedsubject"
-        ]
+        ], 
+        "src_count": 19, 
+        "tgt_count": 8
     }, 
     "runas_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 4
     }, 
     "samplingprofiler_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "sap_uim_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "scheduling_policy_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
+    }, 
+    "sdcard_type": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 25
     }, 
     "sdcardd": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 19, 
+        "tgt_count": 11
     }, 
     "sdcardd_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "search_service": {
         "aliases": [], 
@@ -2469,32 +3659,42 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "security_file": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 33
     }, 
     "security_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "selinuxfs": {
         "aliases": [], 
         "attributes": [
             "fs_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 19
     }, 
     "sensors_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "sensorservice_service": {
         "aliases": [], 
@@ -2502,13 +3702,17 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "serial_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "serial_service": {
         "aliases": [], 
@@ -2516,7 +3720,15 @@
             "system_api_service", 
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
+    }, 
+    "service_manager_type": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 8
     }, 
     "servicediscovery_service": {
         "aliases": [], 
@@ -2524,7 +3736,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "servicemanager": {
         "aliases": [], 
@@ -2532,54 +3746,70 @@
             "domain_deprecated", 
             "domain", 
             "mlstrustedsubject"
-        ]
+        ], 
+        "src_count": 59, 
+        "tgt_count": 28
     }, 
     "servicemanager_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "servicemanager_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "sgdisk": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 9, 
+        "tgt_count": 7
     }, 
     "sgdisk_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "shared_relro": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 5, 
+        "tgt_count": 0
     }, 
     "shared_relro_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 8
     }, 
     "shared_relro_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "shell": {
         "aliases": [], 
@@ -2587,7 +3817,9 @@
             "domain_deprecated", 
             "domain", 
             "mlstrustedsubject"
-        ]
+        ], 
+        "src_count": 63, 
+        "tgt_count": 20
     }, 
     "shell_data_file": {
         "aliases": [], 
@@ -2595,51 +3827,67 @@
             "file_type", 
             "data_file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 57
     }, 
     "shell_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 18
     }, 
     "shell_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "shell_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "shm": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "slideshow": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 12, 
+        "tgt_count": 5
     }, 
     "socket_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 4
     }, 
     "sockfs": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "statusbar_service": {
         "aliases": [], 
@@ -2647,58 +3895,76 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "storage_file": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 15
     }, 
     "storage_stub_file": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "su_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "surfaceflinger": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 47, 
+        "tgt_count": 26
     }, 
     "surfaceflinger_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "surfaceflinger_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 11
     }, 
     "surfaceflinger_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "swap_block_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "sysfs": {
         "aliases": [], 
@@ -2706,7 +3972,9 @@
             "fs_type", 
             "mlstrustedobject", 
             "sysfs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 21
     }, 
     "sysfs_bluetooth_writable": {
         "aliases": [], 
@@ -2714,28 +3982,36 @@
             "fs_type", 
             "mlstrustedobject", 
             "sysfs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "sysfs_devices_system_cpu": {
         "aliases": [], 
         "attributes": [
             "fs_type", 
             "sysfs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 4
     }, 
     "sysfs_lowmemorykiller": {
         "aliases": [], 
         "attributes": [
             "fs_type", 
             "sysfs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "sysfs_mac_address": {
         "aliases": [], 
         "attributes": [
             "fs_type", 
             "sysfs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "sysfs_nfc_power_writable": {
         "aliases": [], 
@@ -2743,14 +4019,24 @@
             "fs_type", 
             "mlstrustedobject", 
             "sysfs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
+    }, 
+    "sysfs_type": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 1, 
+        "tgt_count": 5
     }, 
     "sysfs_wake_lock": {
         "aliases": [], 
         "attributes": [
             "fs_type", 
             "sysfs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 8
     }, 
     "sysfs_writable": {
         "aliases": [], 
@@ -2758,14 +4044,24 @@
             "fs_type", 
             "mlstrustedobject", 
             "sysfs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
+    }, 
+    "system_api_service": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "system_app": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 42, 
+        "tgt_count": 0
     }, 
     "system_app_data_file": {
         "aliases": [], 
@@ -2773,56 +4069,74 @@
             "file_type", 
             "data_file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 9
     }, 
     "system_app_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "system_app_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "system_block_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 7
     }, 
     "system_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 47
     }, 
     "system_file": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 35
     }, 
     "system_ndebug_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "system_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "system_radio_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 7
     }, 
     "system_server": {
         "aliases": [], 
@@ -2830,66 +4144,92 @@
             "domain_deprecated", 
             "domain", 
             "mlstrustedsubject"
-        ]
+        ], 
+        "src_count": 246, 
+        "tgt_count": 45
+    }, 
+    "system_server_service": {
+        "aliases": [], 
+        "attributes": [], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "system_server_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "system_wpa_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "systemkeys_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 4
     }, 
     "task_service": {
         "aliases": [], 
         "attributes": [
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "tee": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 8, 
+        "tgt_count": 9
     }, 
     "tee_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "tee_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 9
     }, 
     "tee_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "tee_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "telecom_service": {
         "aliases": [], 
@@ -2897,7 +4237,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "textservices_service": {
         "aliases": [], 
@@ -2905,40 +4247,52 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "tmpfs": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 22
     }, 
     "tombstone_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 7
     }, 
     "toolbox": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 8, 
+        "tgt_count": 6
     }, 
     "toolbox_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 23
     }, 
     "toolbox_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "trust_service": {
         "aliases": [], 
@@ -2946,20 +4300,26 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "tty_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "tun_device": {
         "aliases": [], 
         "attributes": [
             "dev_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 7
     }, 
     "tv_input_service": {
         "aliases": [], 
@@ -2967,46 +4327,60 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "tzdatacheck": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 5, 
+        "tgt_count": 3
     }, 
     "tzdatacheck_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "tzdatacheck_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "ueventd": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 26, 
+        "tgt_count": 6
     }, 
     "ueventd_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "uhid_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "uimode_service": {
         "aliases": [], 
@@ -3014,13 +4388,17 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "uio_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "uncrypt": {
         "aliases": [], 
@@ -3028,79 +4406,103 @@
             "domain_deprecated", 
             "domain", 
             "mlstrustedsubject"
-        ]
+        ], 
+        "src_count": 18, 
+        "tgt_count": 5
     }, 
     "uncrypt_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "uncrypt_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "unencrypted_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "unlabeled": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 15
     }, 
     "untrusted_app": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 39, 
+        "tgt_count": 3
     }, 
     "untrusted_app_devpts": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "untrusted_app_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "update_engine": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 14, 
+        "tgt_count": 6
     }, 
     "update_engine_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "update_engine_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "update_engine_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "updatelock_service": {
         "aliases": [], 
@@ -3108,14 +4510,18 @@
             "system_api_service", 
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "urandom_device": {
         "aliases": [], 
         "attributes": [
             "dev_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "usagestats_service": {
         "aliases": [], 
@@ -3123,14 +4529,18 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "usb_device": {
         "aliases": [], 
         "attributes": [
             "dev_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 4
     }, 
     "usb_service": {
         "aliases": [], 
@@ -3138,20 +4548,26 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "usbaccessory_device": {
         "aliases": [], 
         "attributes": [
             "dev_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "usbfs": {
         "aliases": [], 
         "attributes": [
             "fs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "user_service": {
         "aliases": [], 
@@ -3159,46 +4575,60 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "userdata_block_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "usermodehelper": {
         "aliases": [], 
         "attributes": [
             "fs_type", 
             "sysfs_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 3
     }, 
     "vcs_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "vdc": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 11, 
+        "tgt_count": 6
     }, 
     "vdc_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 4
     }, 
     "vdc_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "vfat": {
         "aliases": [
@@ -3208,7 +4638,9 @@
             "fs_type", 
             "sdcard_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "vibrator_service": {
         "aliases": [], 
@@ -3216,13 +4648,17 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "video_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "voiceinteraction_service": {
         "aliases": [], 
@@ -3230,66 +4666,86 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "vold": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 116, 
+        "tgt_count": 39
     }, 
     "vold_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 14
     }, 
     "vold_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "vold_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "vold_prop": {
         "aliases": [], 
         "attributes": [
             "property_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "vold_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "vold_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "vpn_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 7
     }, 
     "wallpaper_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "wallpaper_service": {
         "aliases": [], 
@@ -3297,20 +4753,26 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "watchdog_device": {
         "aliases": [], 
         "attributes": [
             "dev_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "watchdogd": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 4, 
+        "tgt_count": 3
     }, 
     "webviewupdate_service": {
         "aliases": [], 
@@ -3318,14 +4780,18 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "wifi_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 10
     }, 
     "wifi_service": {
         "aliases": [], 
@@ -3333,7 +4799,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "wifip2p_service": {
         "aliases": [], 
@@ -3341,7 +4809,9 @@
             "service_manager_type", 
             "system_server_service", 
             "app_api_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "wifiscanner_service": {
         "aliases": [], 
@@ -3349,7 +4819,9 @@
             "system_api_service", 
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 0
     }, 
     "window_service": {
         "aliases": [], 
@@ -3357,72 +4829,94 @@
             "system_api_service", 
             "service_manager_type", 
             "system_server_service"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "wpa": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 22, 
+        "tgt_count": 15
     }, 
     "wpa_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 2
     }, 
     "wpa_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 7
     }, 
     "wpa_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "zero_device": {
         "aliases": [], 
         "attributes": [
             "dev_type", 
             "mlstrustedobject"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 1
     }, 
     "zoneinfo_data_file": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "data_file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 6
     }, 
     "zygote": {
         "aliases": [], 
         "attributes": [
             "domain_deprecated", 
             "domain"
-        ]
+        ], 
+        "src_count": 41, 
+        "tgt_count": 23
     }, 
     "zygote_exec": {
         "aliases": [], 
         "attributes": [
             "file_type", 
             "exec_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 9
     }, 
     "zygote_socket": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 5
     }, 
     "zygote_tmpfs": {
         "aliases": [], 
         "attributes": [
             "file_type"
-        ]
+        ], 
+        "src_count": 0, 
+        "tgt_count": 4
     }
 }
