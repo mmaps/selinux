@@ -45,7 +45,7 @@ M4_MACRO_FILES = [f for f in SEPOLICY_BUILD_FILES if f.endswith("_macros")]
 
 attrs = {}
 types = {}
-
+attr_map = {}
 
 def parse_cli_args():
     parser = argparse.ArgumentParser()
@@ -200,7 +200,7 @@ def create_maps(policy):
         elif isinstance(p, sepolgen.refpolicy.TypeAlias):
             for a in p.aliases:
                 if not types.get(p.type):
-                    types[p.type] = {"aliases": [a], "attributes": []}
+                    types[p.type] = {"aliases": [a], "attributes": [], "src_count": 0, "tgt_count": 0}
                 else:
                     types[p.type]["aliases"].append(a)
         elif isinstance(p, sepolgen.refpolicy.TypeAttribute):
@@ -212,7 +212,7 @@ def create_maps(policy):
         elif isinstance(p, sepolgen.refpolicy.Type):
             for a in p.aliases:
                 if not types.get(p.name):
-                    types[p.name] = {"aliases": [a], "attributes": []}
+                    types[p.name] = {"aliases": [a], "attributes": [], "src_count": 0, "tgt_count": 0}
                 else:
                     types[p.name]["aliases"].append(a)
             for a in p.attributes:
@@ -221,16 +221,111 @@ def create_maps(policy):
                 else:
                     attrs[a]["types"].append(p.name)
                 if not types.get(p.name):
-                    types[p.name] = {"aliases": [], "attributes": [a]}
+                    types[p.name] = {"aliases": [], "attributes": [a], "src_count": 0, "tgt_count": 0}
                 else:
                     types[p.name]["attributes"].append(a)
+        elif isinstance(p, sepolgen.refpolicy.AVRule):
+            for src in p.src_types:
+                if not types.get(src):
+                    types[src] = {"aliases": [], "attributes": [], "src_count": 1, "tgt_count": 0}
+                else:
+                    types[src]["src_count"] += 1
+                for tgt in p.tgt_types:
+                    if tgt == "self":
+                        tgt = src
+                    if not types.get(tgt):
+                        types[tgt] = {"aliases": [], "attributes": [], "src_count": 0, "tgt_count": 1}
+                    else:
+                        types[tgt]["tgt_count"] += 1
+    for t in types:
+        attributes = types[t]["attributes"]
+        attr_map[t] = attributes
+        for a in types[t]["aliases"]:
+            if attr_map.get(a):
+                print "DUPLICATE: type alias ", t, a
+            else:
+                attr_map[a] = attributes
+
+
+def json_dump(obj, fname):
+    fout = open("data/%s.json" % fname, "w")
+    json.dump(obj, fout, indent=4)
+    fout.close()
 
 
 def build_graph(policy):
-    nodes, edges = find_nodes_edges(policy)
-    fout = open("data/graph.json", "w")
-    json.dump({"nodes": nodes, "links": edges}, fout, indent=4)
-    fout.close()
+    nodes = set()
+    edges = []
+    smax = 0
+    smax_t = None
+    tmax = 0
+    tmax_t = None
+    for t in types:
+        if types[t]["src_count"] > smax:
+            smax_t = t
+            smax = types[t]["src_count"]
+        if types[t]["src_count"] > tmax:
+            tmax_t = t
+            tmax = types[t]["src_count"]
+    logging.debug("Largest source: %s" % smax_t)
+    logging.debug("Largest target: %s" % tmax_t)
+    for p in policy:
+        p = p[0]
+        if isinstance(p, sepolgen.refpolicy.AVRule):
+            for src in p.src_types:
+                if src.startswith("-"):
+                    continue
+                for tgt in p.tgt_types:
+                    if src != smax_t and tgt != smax_t:
+                        continue
+                    if tgt == "self":
+                        tgt = src
+                    nodes.add(src)
+                    nodes.add(tgt)
+                    if (src, tgt) not in edges:
+                        edges.append((src, tgt))
+    nodes = list(nodes)
+    for i, e in enumerate(edges):
+        sidx = nodes.index(e[0])
+        tidx = nodes.index(e[1])
+        edges[i] = {"source": sidx, "target": tidx}
+    nodes = [{"name": n, "type": n} for n in nodes]
+    logging.debug("Nodes: %s Edges: %s" % (len(nodes), len(edges)))
+    json_dump({"nodes": nodes, "links": edges}, "graph")
+
+
+def build_supergraph(policy):
+    nodes = []
+    edges = []
+
+    for a in attrs:
+        nodes.append(a)
+
+    for p in policy:
+        p = p[0]
+        if isinstance(p, sepolgen.refpolicy.AVRule):
+            for src in p.src_types:
+                if src.startswith("-"):
+                    continue
+                sattr = attr_map.get(src)
+                for tgt in p.tgt_types:
+                    if tgt == "self":
+                        tgt = src
+                    tattr = attr_map.get(tgt)
+                    for source in sattr:
+                        for target in tattr:
+                            if (source, target) not in edges:
+                                edges.append((source, target))
+
+    for i, e in enumerate(edges):
+        sidx = nodes.index(e[0])
+        tidx = nodes.index(e[1])
+        edges[i] = {"source": sidx, "target": tidx}
+
+    nodes = [{"name": n, "type": n} for n in nodes]
+
+    logging.debug("Nodes: %s Edges: %s" % (len(nodes), len(edges)))
+    json_dump({"nodes": nodes, "links": edges}, "graph")
 
 
 def build_hive(policy):
@@ -252,10 +347,8 @@ def build_hive(policy):
     for edge in edges:
         edge["imports"] = edge["target"]
 
-    fout = open("data/hive.json", "w")
     #json.dump({"nodes": nodes, "links": edges}, fout, indent=4)
-    json.dump([n[k] for k in n.keys()], fout, indent=4)
-    fout.close()
+    json_dump([n[k] for k in n.keys()], "hive")
 
 
 def build_chord(policy):
@@ -292,12 +385,14 @@ def index_from_template(layout):
 def create_visual(policy, layout):
     if layout == "graph":
         build_graph(policy)
+    elif layout == "supergraph":
+        build_supergraph(policy)
     elif layout == "hive":
         build_hive(policy)
     elif layout == "chord":
         build_chord(policy)
     else:
-        logging.error("Unknown layout: %s\nOptions are graph, hive, chord")
+        logging.error("Unknown layout: %s\nOptions are graph, supergraph, hive, chord")
         sys.exit(1)
 
 
