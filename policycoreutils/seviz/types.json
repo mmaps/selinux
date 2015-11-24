@@ -1,0 +1,3428 @@
+{
+    "DockObserver_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "IProxyService_service": {
+        "aliases": [], 
+        "attributes": [
+            "system_api_service", 
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "ThermalObserver_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "accessibility_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "account_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "activity_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "adb_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "adb_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "adb_keys_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "adbd": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain", 
+            "mlstrustedsubject"
+        ]
+    }, 
+    "adbd_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "alarm_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "alarm_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "anr_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "apk_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "apk_private_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "apk_private_tmp_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "apk_tmp_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "app_data_file": {
+        "aliases": [
+            "platform_app_data_file", 
+            "download_file"
+        ], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "appops_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "appwidget_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "asec_apk_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "asec_image_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "asec_public_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "ashmem_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "assetatlas_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "atrace_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "audio_data_file": {
+        "aliases": [
+            "audio_firmware_file"
+        ], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "audio_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "audio_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "audio_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "backup_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "backup_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "battery_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "batterystats_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "binder_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "binfmt_miscfs": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "blkid": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "blkid_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "blkid_untrusted": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "block_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "bluetooth": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "bluetooth_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "bluetooth_efs_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "bluetooth_manager_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "bluetooth_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "bluetooth_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type"
+        ]
+    }, 
+    "bluetooth_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "bluetooth_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "boot_block_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "bootanim": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "bootanim_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "bootanim_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "bootchart_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "boottrace_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "cache_backup_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "cache_block_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "cache_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "camera_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "camera_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "cameraproxy_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "cgroup": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "clatd": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "clatd_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "clipboard_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "commontime_management_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "config_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "connectivity_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "console_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "consumer_ir_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "content_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "coredump_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "country_detector_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "cpuctl_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "cpuinfo_service": {
+        "aliases": [], 
+        "attributes": [
+            "system_api_service", 
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "ctl_bootanim_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "ctl_bugreport_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "ctl_console_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "ctl_default_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "ctl_dhcp_pan_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "ctl_dumpstate_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "ctl_fuse_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "ctl_mdnsd_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "ctl_rildaemon_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "dalvik_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "dalvikcache_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "dbinfo_service": {
+        "aliases": [], 
+        "attributes": [
+            "system_api_service", 
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "debug_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "debugfs": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "debuggerd": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "debuggerd_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "debuggerd_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "debuggerd_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "default_android_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type"
+        ]
+    }, 
+    "default_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type", 
+            "fs_type"
+        ]
+    }, 
+    "device_policy_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "deviceidle_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "devicestoragemonitor_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "devpts": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "dex2oat": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "dex2oat_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "dhcp": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "dhcp_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "dhcp_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "dhcp_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "dhcp_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "diskstats_service": {
+        "aliases": [], 
+        "attributes": [
+            "system_api_service", 
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "display_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "dm_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "dnsmasq": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "dnsmasq_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "dnsproxyd_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "dreams_service": {
+        "aliases": [], 
+        "attributes": [
+            "system_api_service", 
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "drm_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "drmserver": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "drmserver_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "drmserver_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type"
+        ]
+    }, 
+    "drmserver_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "drmserver_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "dropbox_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "dumpstate": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain", 
+            "mlstrustedsubject"
+        ]
+    }, 
+    "dumpstate_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "dumpstate_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "dumpstate_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "efs_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "ethernet_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "ffs_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "fingerprint_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "fingerprint_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "fingerprintd": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "fingerprintd_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "fingerprintd_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "fingerprintd_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type"
+        ]
+    }, 
+    "fingerprintd_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "frp_block_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "fsck": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "fsck_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "fsck_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "fsck_untrusted": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "fscklogs": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "full_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "functionfs": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "fuse": {
+        "aliases": [
+            "sdcard_internal"
+        ], 
+        "attributes": [
+            "fs_type", 
+            "sdcard_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "fuse_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "fwmarkd_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "gatekeeper_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "gatekeeper_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "app_api_service"
+        ]
+    }, 
+    "gatekeeperd": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "gatekeeperd_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "gatekeeperd_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "gfxinfo_service": {
+        "aliases": [], 
+        "attributes": [
+            "system_api_service", 
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "gps_control": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "gps_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "gps_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "gps_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "gpsd": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "gpsd_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "gpsd_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "gpu_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "graphics_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "graphicsstats_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "hardware_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "hci_attach": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "hci_attach_dev": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "hci_attach_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "hci_attach_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "hdmi_control_service": {
+        "aliases": [], 
+        "attributes": [
+            "system_api_service", 
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "healthd": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "healthd_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type"
+        ]
+    }, 
+    "heapdump_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "hostapd": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "hostapd_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "hw_random_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "i2c_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "idmap": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "idmap_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "iio_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "imms_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "init": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain", 
+            "mlstrustedsubject"
+        ]
+    }, 
+    "init_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "init_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "inotify": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "input_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "input_method_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "input_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "inputflinger": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "inputflinger_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "inputflinger_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type"
+        ]
+    }, 
+    "inputflinger_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "install_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "install_recovery": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "install_recovery_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "install_recovery_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "installd": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "installd_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "installd_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "installd_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "ion_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "isolated_app": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "isolated_app_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "jobscheduler_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "kernel": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain", 
+            "mlstrustedsubject"
+        ]
+    }, 
+    "keychain_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "keystore": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "keystore_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "keystore_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "keystore_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type"
+        ]
+    }, 
+    "keystore_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "klog_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "kmem_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "kmsg_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "labeledfs": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "launcherapps_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "lmkd": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain", 
+            "mlstrustedsubject"
+        ]
+    }, 
+    "lmkd_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "lmkd_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "lmkd_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "location_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "lock_settings_service": {
+        "aliases": [], 
+        "attributes": [
+            "system_api_service", 
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "log_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "logcat_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "logd": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain", 
+            "mlstrustedsubject"
+        ]
+    }, 
+    "logd_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "logd_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "logd_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "logd_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "logdr_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "logdw_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "loop_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "mdns_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "mdnsd": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain", 
+            "mlstrustedsubject"
+        ]
+    }, 
+    "mdnsd_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "mdnsd_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "mdnsd_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "media_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "media_projection_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "media_router_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "media_rw_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "media_session_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "mediaserver": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "mediaserver_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "mediaserver_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type"
+        ]
+    }, 
+    "mediaserver_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "meminfo_service": {
+        "aliases": [], 
+        "attributes": [
+            "system_api_service", 
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "metadata_block_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "method_trace_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "midi_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "misc_block_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "misc_logd_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "misc_user_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "mnt_expand_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "mnt_media_rw_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "mnt_media_rw_stub_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "mnt_user_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "mount_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "mqueue": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "mtd_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "mtp": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "mtp_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "mtp_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "mtp_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "mtpd_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "nativetest_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "net_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "net_radio_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "netd": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain", 
+            "mlstrustedsubject"
+        ]
+    }, 
+    "netd_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "netd_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "netd_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "netif": {
+        "aliases": [], 
+        "attributes": [
+            "netif_type"
+        ]
+    }, 
+    "netpolicy_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "netstats_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "network_management_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "network_score_service": {
+        "aliases": [], 
+        "attributes": [
+            "system_api_service", 
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "nfc": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "nfc_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "nfc_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "nfc_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "nfc_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type"
+        ]
+    }, 
+    "nfc_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "node": {
+        "aliases": [], 
+        "attributes": [
+            "node_type"
+        ]
+    }, 
+    "notification_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "null_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "oemfs": {
+        "aliases": [], 
+        "attributes": [
+            "contextmount_type", 
+            "fs_type"
+        ]
+    }, 
+    "owntty_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "package_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "pan_result_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "perfprofd_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "perfprofd_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "permission_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "persist_debug_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "persistent_data_block_service": {
+        "aliases": [], 
+        "attributes": [
+            "system_api_service", 
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "pipefs": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "platform_app": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "platform_app_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "pmsg_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "port": {
+        "aliases": [], 
+        "attributes": [
+            "port_type"
+        ]
+    }, 
+    "power_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "powerctl_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "ppp": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "ppp_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "ppp_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "print_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "priv_app": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "priv_app_devpts": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "priv_app_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "proc": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "proc_bluetooth_writable": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "proc_cpuinfo": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "proc_drop_caches": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "proc_iomem": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "proc_net": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "proc_security": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "proc_sysrq": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "proc_uid_cputime_removeuid": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "proc_uid_cputime_showstat": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "processinfo_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "procstats_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "properties_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "property_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "property_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "pstorefs": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "ptmx_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "qtaguid_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "qtaguid_proc": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "racoon": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "racoon_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "racoon_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "racoon_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "radio": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain", 
+            "mlstrustedsubject"
+        ]
+    }, 
+    "radio_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "radio_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "radio_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "radio_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type"
+        ]
+    }, 
+    "radio_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "ram_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "random_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "recovery": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "recovery_block_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "registry_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "resourcecache_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "restorecon_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "restrictions_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "rild": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "rild_debug_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "rild_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "rild_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "rild_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "root_block_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "rootfs": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "rpmsg_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "rtc_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "rttmanager_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "runas": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain", 
+            "mlstrustedsubject"
+        ]
+    }, 
+    "runas_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "samplingprofiler_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "sap_uim_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "scheduling_policy_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "sdcardd": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "sdcardd_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "search_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "security_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "security_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "selinuxfs": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "sensors_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "sensorservice_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "serial_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "serial_service": {
+        "aliases": [], 
+        "attributes": [
+            "system_api_service", 
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "servicediscovery_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "servicemanager": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain", 
+            "mlstrustedsubject"
+        ]
+    }, 
+    "servicemanager_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "servicemanager_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "sgdisk": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "sgdisk_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "shared_relro": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "shared_relro_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "shared_relro_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "shell": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain", 
+            "mlstrustedsubject"
+        ]
+    }, 
+    "shell_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "shell_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "shell_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "shell_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "shm": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "slideshow": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "socket_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "sockfs": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "statusbar_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "storage_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "storage_stub_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "su_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "surfaceflinger": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "surfaceflinger_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "surfaceflinger_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type"
+        ]
+    }, 
+    "surfaceflinger_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "swap_block_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "sysfs": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type", 
+            "mlstrustedobject", 
+            "sysfs_type"
+        ]
+    }, 
+    "sysfs_bluetooth_writable": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type", 
+            "mlstrustedobject", 
+            "sysfs_type"
+        ]
+    }, 
+    "sysfs_devices_system_cpu": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type", 
+            "sysfs_type"
+        ]
+    }, 
+    "sysfs_lowmemorykiller": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type", 
+            "sysfs_type"
+        ]
+    }, 
+    "sysfs_mac_address": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type", 
+            "sysfs_type"
+        ]
+    }, 
+    "sysfs_nfc_power_writable": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type", 
+            "mlstrustedobject", 
+            "sysfs_type"
+        ]
+    }, 
+    "sysfs_wake_lock": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type", 
+            "sysfs_type"
+        ]
+    }, 
+    "sysfs_writable": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type", 
+            "mlstrustedobject", 
+            "sysfs_type"
+        ]
+    }, 
+    "system_app": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "system_app_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "system_app_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type"
+        ]
+    }, 
+    "system_app_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "system_block_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "system_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "system_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "system_ndebug_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "system_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "system_radio_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "system_server": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain", 
+            "mlstrustedsubject"
+        ]
+    }, 
+    "system_server_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "system_wpa_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "systemkeys_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "task_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "tee": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "tee_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "tee_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "tee_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "tee_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "telecom_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "textservices_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "tombstone_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "toolbox": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "toolbox_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "toolbox_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "trust_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "tty_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "tun_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "tv_input_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "tzdatacheck": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "tzdatacheck_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "tzdatacheck_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "ueventd": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "ueventd_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "uhid_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "uimode_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "uio_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "uncrypt": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain", 
+            "mlstrustedsubject"
+        ]
+    }, 
+    "uncrypt_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "uncrypt_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "unencrypted_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "unlabeled": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "untrusted_app": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "untrusted_app_devpts": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "untrusted_app_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "update_engine": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "update_engine_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "update_engine_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "update_engine_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "updatelock_service": {
+        "aliases": [], 
+        "attributes": [
+            "system_api_service", 
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "urandom_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "usagestats_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "usb_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "usb_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "usbaccessory_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "usbfs": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type"
+        ]
+    }, 
+    "user_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "userdata_block_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "usermodehelper": {
+        "aliases": [], 
+        "attributes": [
+            "fs_type", 
+            "sysfs_type"
+        ]
+    }, 
+    "vcs_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "vdc": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "vdc_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "vdc_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "vfat": {
+        "aliases": [
+            "sdcard_external"
+        ], 
+        "attributes": [
+            "fs_type", 
+            "sdcard_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "vibrator_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "video_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "voiceinteraction_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "vold": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "vold_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "vold_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "vold_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "vold_prop": {
+        "aliases": [], 
+        "attributes": [
+            "property_type"
+        ]
+    }, 
+    "vold_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "vold_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "vpn_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "wallpaper_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "wallpaper_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "watchdog_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type"
+        ]
+    }, 
+    "watchdogd": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "webviewupdate_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "wifi_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "wifi_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "wifip2p_service": {
+        "aliases": [], 
+        "attributes": [
+            "service_manager_type", 
+            "system_server_service", 
+            "app_api_service"
+        ]
+    }, 
+    "wifiscanner_service": {
+        "aliases": [], 
+        "attributes": [
+            "system_api_service", 
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "window_service": {
+        "aliases": [], 
+        "attributes": [
+            "system_api_service", 
+            "service_manager_type", 
+            "system_server_service"
+        ]
+    }, 
+    "wpa": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "wpa_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "wpa_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "wpa_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "zero_device": {
+        "aliases": [], 
+        "attributes": [
+            "dev_type", 
+            "mlstrustedobject"
+        ]
+    }, 
+    "zoneinfo_data_file": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "data_file_type"
+        ]
+    }, 
+    "zygote": {
+        "aliases": [], 
+        "attributes": [
+            "domain_deprecated", 
+            "domain"
+        ]
+    }, 
+    "zygote_exec": {
+        "aliases": [], 
+        "attributes": [
+            "file_type", 
+            "exec_type"
+        ]
+    }, 
+    "zygote_socket": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }, 
+    "zygote_tmpfs": {
+        "aliases": [], 
+        "attributes": [
+            "file_type"
+        ]
+    }
+}

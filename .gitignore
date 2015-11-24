@@ -24,3 +24,5 @@ cscope.*
 .*.swp
 # Failsafes
 !.gitignore
+
+.idea
