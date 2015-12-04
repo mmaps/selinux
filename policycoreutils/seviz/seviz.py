@@ -43,9 +43,12 @@ SEPOLICY_BUILD_FILES = ["security_classes",
 
 M4_MACRO_FILES = [f for f in SEPOLICY_BUILD_FILES if f.endswith("_macros")]
 
+aliases = {}
 attrs = {}
 types = {}
+classes = {}
 attr_map = {}
+
 
 def parse_cli_args():
     parser = argparse.ArgumentParser()
@@ -119,7 +122,7 @@ def find_m4_syncline(lines, idx):
     return "%s %s %s" % (crunch, line_num, fname)
 
 
-def sanitize(m4_text):
+def sanitize_expansions(m4_text):
     lines = m4_text.split("\n")
     clean = []
     for i, line in enumerate(lines):
@@ -134,7 +137,7 @@ def sanitize(m4_text):
     return "\n".join(clean)
 
 
-def generate_policy(text, policy_mod=None):
+def policy_from_source(text, policy_mod=None):
     try:
         if policy_mod:
             policy = sepolgen.refparser.parse(text, policy_mod)
@@ -144,6 +147,81 @@ def generate_policy(text, policy_mod=None):
         logging.error("Parse error: %s" % e)
     else:
         return policy
+
+
+def add_alias(alias):
+    if alias not in aliases:
+        aliases[alias] = { "types": []}
+
+
+def add_attr(attr):
+    if attr not in attrs:
+        attrs[attr] = {"types": []}
+
+
+def add_class(class_):
+    if class_ not in classes:
+        classes[class_] = {"types": []}
+
+
+def add_type(type_):
+    if type_ not in types:
+        types[type_] = {"aliases": [], "attributes": [], "classes": [], "src_cnt": 0, "tgt_cnt": 0}
+
+
+def add_type_src(type_):
+    add_type(type_)
+    types[type_]["src_cnt"] += 1
+
+
+def add_type_tgt(type_):
+    add_type(type_)
+    types[type_]["tgt_cnt"] += 1
+
+
+def map_type_class(class_, type_):
+    try:
+        if type_ not in classes[class_]["types"]:
+            classes[class_]["types"].append(type_)
+    except KeyError:
+        add_class(class_)
+        classes[class_]["types"].append(type_)
+    try:
+        if class_ not in types[type_]["classes"]:
+            types[type_]["classes"].append(class_)
+    except KeyError:
+        add_type(type_)
+        types[type_]["classes"].append(class_)
+
+
+def map_type_alias(type_, alias):
+    try:
+        if type_ not in aliases[alias]["types"]:
+            aliases[alias]["types"].append(type_)
+    except KeyError:
+        add_alias(alias)
+        aliases[alias]["types"].append(type_)
+    try:
+        if alias not in types[type_]["aliases"]:
+            types[type_]["aliases"].append(alias)
+    except KeyError:
+        add_type(type_)
+        types[type_]["aliases"].append(alias)
+
+
+def map_type_attribute(type_, attr):
+    try:
+        if type_ not in attrs[attr]["types"]:
+            attrs[attr]["types"].append(type_)
+    except KeyError:
+        add_attr(attr)
+        attrs[attr]["types"].append(type_)
+    try:
+        if attr not in types[type_]["attributes"]:
+            types[type_]["attributes"].append(attr)
+    except KeyError:
+        add_type(type_)
+        types[type_]["attributes"].append(attr)
 
 
 def find_nodes_edges(pol):
@@ -195,56 +273,31 @@ def create_maps(policy):
     for p in policy:
         p = p[0]
         if isinstance(p, sepolgen.refpolicy.Attribute):
-            if not attrs.get(p.name):
-                attrs[p.name] = {"types": []}
+            add_attr(p.name)
         elif isinstance(p, sepolgen.refpolicy.TypeAlias):
             for a in p.aliases:
-                if not types.get(p.type):
-                    types[p.type] = {"aliases": [a], "attributes": [], "src_count": 0, "tgt_count": 0}
-                else:
-                    types[p.type]["aliases"].append(a)
+                map_type_alias(p.type, a)
         elif isinstance(p, sepolgen.refpolicy.TypeAttribute):
             for a in p.attributes:
-                if not attrs.get(a):
-                    attrs[a] = {"types": [p.type]}
-                else:
-                    attrs[a]["types"].append(p.type)
+                map_type_attribute(p.type, a)
         elif isinstance(p, sepolgen.refpolicy.Type):
             for a in p.aliases:
-                if not types.get(p.name):
-                    types[p.name] = {"aliases": [a], "attributes": [], "src_count": 0, "tgt_count": 0}
-                else:
-                    types[p.name]["aliases"].append(a)
+                map_type_alias(p.name, a)
             for a in p.attributes:
-                if not attrs.get(a):
-                    attrs[a] = {"types": [p.name]}
-                else:
-                    attrs[a]["types"].append(p.name)
-                if not types.get(p.name):
-                    types[p.name] = {"aliases": [], "attributes": [a], "src_count": 0, "tgt_count": 0}
-                else:
-                    types[p.name]["attributes"].append(a)
+                map_type_attribute(p.name, a)
         elif isinstance(p, sepolgen.refpolicy.AVRule):
             for src in p.src_types:
-                if not types.get(src):
-                    types[src] = {"aliases": [], "attributes": [], "src_count": 1, "tgt_count": 0}
-                else:
-                    types[src]["src_count"] += 1
+                if src.startswith("-"):
+                    continue
+                add_type_src(src)
                 for tgt in p.tgt_types:
+                    if tgt.startswith("-") or tgt == "*":
+                        continue
                     if tgt == "self":
                         tgt = src
-                    if not types.get(tgt):
-                        types[tgt] = {"aliases": [], "attributes": [], "src_count": 0, "tgt_count": 1}
-                    else:
-                        types[tgt]["tgt_count"] += 1
-    for t in types:
-        attributes = types[t]["attributes"]
-        attr_map[t] = attributes
-        for a in types[t]["aliases"]:
-            if attr_map.get(a):
-                print "DUPLICATE: type alias ", t, a
-            else:
-                attr_map[a] = attributes
+                    add_type_tgt(tgt)
+                    for cls in p.obj_classes:
+                        map_type_class(cls, tgt)
 
 
 def json_dump(obj, fname):
@@ -261,12 +314,12 @@ def build_graph(policy):
     tmax = 0
     tmax_t = None
     for t in types:
-        if types[t]["src_count"] > smax:
+        if types[t]["src_cnt"] > smax:
             smax_t = t
-            smax = types[t]["src_count"]
-        if types[t]["src_count"] > tmax:
+            smax = types[t]["src_cnt"]
+        if types[t]["src_cnt"] > tmax:
             tmax_t = t
-            tmax = types[t]["src_count"]
+            tmax = types[t]["src_cnt"]
     logging.debug("Largest source: %s" % smax_t)
     logging.debug("Largest target: %s" % tmax_t)
     for p in policy:
@@ -408,6 +461,18 @@ def start_web_server():
         httpd.socket.close()
 
 
+def dump_maps():
+    try:
+        with open("types.json", "w") as fout_types,\
+                open("attrs.json", "w") as fout_attrs,\
+                open("classes.json", "w") as fout_classes:
+            json.dump(types, fout_types, indent=4, sort_keys=True)
+            json.dump(attrs, fout_attrs, indent=4, sort_keys=True)
+            json.dump(classes, fout_classes, indent=4, sort_keys=True)
+    except (IOError, OSError) as e:
+        logging.warn("Could not write debug file: %s" % e)
+
+
 def main(args):
     expanded = preprocess([args.policy_dir, args.board_dir])
     if args.debug:
@@ -419,21 +484,16 @@ def main(args):
     """
     Clean up trailing semi-colons
     """
-    expanded = sanitize(expanded)
+    expanded = sanitize_expansions(expanded)
 
-    policy = generate_policy(expanded)
+    policy = policy_from_source(expanded)
     if not policy:
         logging.error("Parsing returned empty result")
         sys.exit(1)
 
     create_maps(policy)
     if args.debug:
-        try:
-            with open("types.json", "w") as fout_types, open("attrs.json", "w") as fout_attrs:
-                json.dump(types, fout_types, indent=4, sort_keys=True)
-                json.dump(attrs, fout_attrs, indent=4, sort_keys=True)
-        except (IOError, OSError) as e:
-            logging.warn("Could not write debug file: %s" % e)
+        dump_maps()
 
     create_visual(policy, args.layout)
 
