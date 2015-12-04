@@ -1,306 +1,814 @@
 {
     "nodes": [
         {
-            "type": "domain", 
-            "name": "domain"
-        }, 
-        {
-            "type": "sysfs_type", 
-            "name": "sysfs_type"
-        }, 
-        {
-            "type": "file_type", 
-            "name": "file_type"
-        }, 
-        {
-            "type": "app_api_service", 
-            "name": "app_api_service"
-        }, 
-        {
-            "type": "node_type", 
-            "name": "node_type"
-        }, 
-        {
-            "type": "fs_type", 
-            "name": "fs_type"
-        }, 
-        {
-            "type": "port_type", 
-            "name": "port_type"
-        }, 
-        {
-            "type": "system_server_service", 
-            "name": "system_server_service"
-        }, 
-        {
-            "type": "property_type", 
-            "name": "property_type"
-        }, 
-        {
-            "type": "bluetoothdomain", 
-            "name": "bluetoothdomain"
-        }, 
-        {
-            "type": "contextmount_type", 
-            "name": "contextmount_type"
-        }, 
-        {
-            "type": "mlstrustedobject", 
-            "name": "mlstrustedobject"
-        }, 
-        {
-            "type": "system_api_service", 
-            "name": "system_api_service"
-        }, 
-        {
-            "type": "sdcard_type", 
-            "name": "sdcard_type"
-        }, 
-        {
-            "type": "domain_deprecated", 
-            "name": "domain_deprecated"
-        }, 
-        {
-            "type": "appdomain", 
-            "name": "appdomain"
-        }, 
-        {
-            "type": "binderservicedomain", 
-            "name": "binderservicedomain"
+            "type": "adbd", 
+            "name": "adbd"
         }, 
         {
             "type": "exec_type", 
             "name": "exec_type"
         }, 
         {
+            "type": "dumpstate", 
+            "name": "dumpstate"
+        }, 
+        {
+            "type": "property_type", 
+            "name": "property_type"
+        }, 
+        {
+            "type": "selinuxfs", 
+            "name": "selinuxfs"
+        }, 
+        {
+            "type": "dex2oat_exec", 
+            "name": "dex2oat_exec"
+        }, 
+        {
+            "type": "keychain_data_file", 
+            "name": "keychain_data_file"
+        }, 
+        {
+            "type": "runas", 
+            "name": "runas"
+        }, 
+        {
+            "type": "shell_data_file", 
+            "name": "shell_data_file"
+        }, 
+        {
+            "type": "apk_tmp_file", 
+            "name": "apk_tmp_file"
+        }, 
+        {
+            "type": "servicemanager", 
+            "name": "servicemanager"
+        }, 
+        {
+            "type": "media_rw_data_file", 
+            "name": "media_rw_data_file"
+        }, 
+        {
+            "type": "backup_data_file", 
+            "name": "backup_data_file"
+        }, 
+        {
+            "type": "camera_device", 
+            "name": "camera_device"
+        }, 
+        {
+            "type": "zygote_socket", 
+            "name": "zygote_socket"
+        }, 
+        {
+            "type": "tmpfs", 
+            "name": "tmpfs"
+        }, 
+        {
+            "type": "logdr_socket", 
+            "name": "logdr_socket"
+        }, 
+        {
+            "type": "zygote_tmpfs", 
+            "name": "zygote_tmpfs"
+        }, 
+        {
+            "type": "cache_backup_file", 
+            "name": "cache_backup_file"
+        }, 
+        {
+            "type": "zygote", 
+            "name": "zygote"
+        }, 
+        {
+            "type": "shell_exec", 
+            "name": "shell_exec"
+        }, 
+        {
+            "type": "radio_data_file", 
+            "name": "radio_data_file"
+        }, 
+        {
+            "type": "apk_private_tmp_file", 
+            "name": "apk_private_tmp_file"
+        }, 
+        {
+            "type": "kernel", 
+            "name": "kernel"
+        }, 
+        {
+            "type": "domain", 
+            "name": "domain"
+        }, 
+        {
+            "type": "lmkd", 
+            "name": "lmkd"
+        }, 
+        {
+            "type": "audio_device", 
+            "name": "audio_device"
+        }, 
+        {
+            "type": "console_device", 
+            "name": "console_device"
+        }, 
+        {
+            "type": "fs_type", 
+            "name": "fs_type"
+        }, 
+        {
+            "type": "storage_file", 
+            "name": "storage_file"
+        }, 
+        {
+            "type": "wallpaper_file", 
+            "name": "wallpaper_file"
+        }, 
+        {
+            "type": "gps_device", 
+            "name": "gps_device"
+        }, 
+        {
+            "type": "devpts", 
+            "name": "devpts"
+        }, 
+        {
+            "type": "bluetooth_data_file", 
+            "name": "bluetooth_data_file"
+        }, 
+        {
+            "type": "gpu_device", 
+            "name": "gpu_device"
+        }, 
+        {
+            "type": "sysfs", 
+            "name": "sysfs"
+        }, 
+        {
+            "type": "mnt_user_file", 
+            "name": "mnt_user_file"
+        }, 
+        {
+            "type": "toolbox_exec", 
+            "name": "toolbox_exec"
+        }, 
+        {
+            "type": "efs_file", 
+            "name": "efs_file"
+        }, 
+        {
+            "type": "proc", 
+            "name": "proc"
+        }, 
+        {
+            "type": "tee_device", 
+            "name": "tee_device"
+        }, 
+        {
+            "type": "security_file", 
+            "name": "security_file"
+        }, 
+        {
+            "type": "rpmsg_device", 
+            "name": "rpmsg_device"
+        }, 
+        {
+            "type": "anr_data_file", 
+            "name": "anr_data_file"
+        }, 
+        {
+            "type": "logcat_exec", 
+            "name": "logcat_exec"
+        }, 
+        {
+            "type": "binderservicedomain", 
+            "name": "binderservicedomain"
+        }, 
+        {
+            "type": "usb_device", 
+            "name": "usb_device"
+        }, 
+        {
+            "type": "runas_exec", 
+            "name": "runas_exec"
+        }, 
+        {
+            "type": "adbd_socket", 
+            "name": "adbd_socket"
+        }, 
+        {
+            "type": "qtaguid_device", 
+            "name": "qtaguid_device"
+        }, 
+        {
+            "type": "property_socket", 
+            "name": "property_socket"
+        }, 
+        {
+            "type": "mediaserver", 
+            "name": "mediaserver"
+        }, 
+        {
+            "type": "drm_data_file", 
+            "name": "drm_data_file"
+        }, 
+        {
+            "type": "system_server", 
+            "name": "system_server"
+        }, 
+        {
+            "type": "dm_device", 
+            "name": "dm_device"
+        }, 
+        {
+            "type": "shared_relro_file", 
+            "name": "shared_relro_file"
+        }, 
+        {
+            "type": "system_file", 
+            "name": "system_file"
+        }, 
+        {
+            "type": "hci_attach_dev", 
+            "name": "hci_attach_dev"
+        }, 
+        {
+            "type": "shell", 
+            "name": "shell"
+        }, 
+        {
+            "type": "usbaccessory_device", 
+            "name": "usbaccessory_device"
+        }, 
+        {
+            "type": "appdomain", 
+            "name": "appdomain"
+        }, 
+        {
+            "type": "socket_device", 
+            "name": "socket_device"
+        }, 
+        {
+            "type": "keystore_data_file", 
+            "name": "keystore_data_file"
+        }, 
+        {
+            "type": "gps_data_file", 
+            "name": "gps_data_file"
+        }, 
+        {
+            "type": "mnt_expand_file", 
+            "name": "mnt_expand_file"
+        }, 
+        {
+            "type": "logd", 
+            "name": "logd"
+        }, 
+        {
+            "type": "systemkeys_data_file", 
+            "name": "systemkeys_data_file"
+        }, 
+        {
+            "type": "logd_socket", 
+            "name": "logd_socket"
+        }, 
+        {
+            "type": "dalvikcache_data_file", 
+            "name": "dalvikcache_data_file"
+        }, 
+        {
+            "type": "vfat", 
+            "name": "vfat"
+        }, 
+        {
+            "type": "nfc_device", 
+            "name": "nfc_device"
+        }, 
+        {
+            "type": "ashmem_device", 
+            "name": "ashmem_device"
+        }, 
+        {
+            "type": "wifi_data_file", 
+            "name": "wifi_data_file"
+        }, 
+        {
+            "type": "cache_file", 
+            "name": "cache_file"
+        }, 
+        {
+            "type": "surfaceflinger", 
+            "name": "surfaceflinger"
+        }, 
+        {
+            "type": "zygote_exec", 
+            "name": "zygote_exec"
+        }, 
+        {
+            "type": "keystore", 
+            "name": "keystore"
+        }, 
+        {
+            "type": "keystore_service", 
+            "name": "keystore_service"
+        }, 
+        {
+            "type": "rild_socket", 
+            "name": "rild_socket"
+        }, 
+        {
+            "type": "-appdomain", 
+            "name": "-appdomain"
+        }, 
+        {
+            "type": "drmserver", 
+            "name": "drmserver"
+        }, 
+        {
+            "type": "oemfs", 
+            "name": "oemfs"
+        }, 
+        {
+            "type": "radio_device", 
+            "name": "radio_device"
+        }, 
+        {
+            "type": "resourcecache_data_file", 
+            "name": "resourcecache_data_file"
+        }, 
+        {
+            "type": "installd_socket", 
+            "name": "installd_socket"
+        }, 
+        {
+            "type": "system_data_file", 
+            "name": "system_data_file"
+        }, 
+        {
+            "type": "qtaguid_proc", 
+            "name": "qtaguid_proc"
+        }, 
+        {
+            "type": "misc_user_data_file", 
+            "name": "misc_user_data_file"
+        }, 
+        {
+            "type": "fuse", 
+            "name": "fuse"
+        }, 
+        {
+            "type": "rootfs", 
+            "name": "rootfs"
+        }, 
+        {
+            "type": "app_data_file", 
+            "name": "app_data_file"
+        }, 
+        {
+            "type": "dhcp_data_file", 
+            "name": "dhcp_data_file"
+        }, 
+        {
             "type": "dev_type", 
             "name": "dev_type"
         }, 
         {
-            "type": "netif_type", 
-            "name": "netif_type"
+            "type": "apk_private_data_file", 
+            "name": "apk_private_data_file"
         }, 
         {
-            "type": "service_manager_type", 
-            "name": "service_manager_type"
+            "type": "vold_socket", 
+            "name": "vold_socket"
         }, 
         {
-            "type": "mlstrustedsubject", 
-            "name": "mlstrustedsubject"
-        }, 
-        {
-            "type": "data_file_type", 
-            "name": "data_file_type"
-        }, 
-        {
-            "type": "netdomain", 
-            "name": "netdomain"
+            "type": "apk_data_file", 
+            "name": "apk_data_file"
         }
     ], 
     "links": [
         {
-            "source": 14, 
+            "source": 53, 
+            "target": 60
+        }, 
+        {
+            "source": 60, 
+            "target": 53
+        }, 
+        {
+            "source": 19, 
+            "target": 60
+        }, 
+        {
+            "source": 80, 
+            "target": 60
+        }, 
+        {
+            "source": 60, 
+            "target": 80
+        }, 
+        {
+            "source": 0, 
+            "target": 60
+        }, 
+        {
+            "source": 74, 
+            "target": 60
+        }, 
+        {
+            "source": 60, 
+            "target": 74
+        }, 
+        {
+            "source": 25, 
+            "target": 60
+        }, 
+        {
+            "source": 51, 
+            "target": 60
+        }, 
+        {
+            "source": 60, 
+            "target": 51
+        }, 
+        {
+            "source": 2, 
+            "target": 60
+        }, 
+        {
+            "source": 60, 
             "target": 2
         }, 
         {
-            "source": 14, 
+            "source": 45, 
+            "target": 60
+        }, 
+        {
+            "source": 60, 
+            "target": 60
+        }, 
+        {
+            "source": 60, 
+            "target": 71
+        }, 
+        {
+            "source": 60, 
+            "target": 19
+        }, 
+        {
+            "source": 60, 
+            "target": 75
+        }, 
+        {
+            "source": 60, 
             "target": 17
         }, 
         {
-            "source": 0, 
-            "target": 2
+            "source": 60, 
+            "target": 58
         }, 
         {
-            "source": 0, 
-            "target": 17
-        }, 
-        {
-            "source": 21, 
-            "target": 2
-        }, 
-        {
-            "source": 21, 
-            "target": 17
-        }, 
-        {
-            "source": 14, 
-            "target": 14
-        }, 
-        {
-            "source": 14, 
+            "source": 60, 
             "target": 0
         }, 
         {
-            "source": 0, 
-            "target": 14
+            "source": 60, 
+            "target": 32
         }, 
         {
-            "source": 0, 
-            "target": 0
+            "source": 60, 
+            "target": 90
         }, 
         {
-            "source": 21, 
-            "target": 14
+            "source": 60, 
+            "target": 85
         }, 
         {
-            "source": 21, 
-            "target": 0
+            "source": 60, 
+            "target": 64
         }, 
         {
-            "source": 14, 
-            "target": 21
+            "source": 60, 
+            "target": 6
         }, 
         {
-            "source": 0, 
-            "target": 21
+            "source": 60, 
+            "target": 87
         }, 
         {
-            "source": 14, 
-            "target": 22
+            "source": 60, 
+            "target": 81
         }, 
         {
-            "source": 0, 
-            "target": 22
-        }, 
-        {
-            "source": 14, 
-            "target": 11
-        }, 
-        {
-            "source": 0, 
-            "target": 11
-        }, 
-        {
-            "source": 14, 
-            "target": 10
-        }, 
-        {
-            "source": 14, 
-            "target": 5
-        }, 
-        {
-            "source": 0, 
-            "target": 10
-        }, 
-        {
-            "source": 0, 
-            "target": 5
-        }, 
-        {
-            "source": 21, 
-            "target": 22
-        }, 
-        {
-            "source": 21, 
-            "target": 21
-        }, 
-        {
-            "source": 14, 
-            "target": 1
-        }, 
-        {
-            "source": 0, 
-            "target": 1
-        }, 
-        {
-            "source": 21, 
-            "target": 5
-        }, 
-        {
-            "source": 21, 
-            "target": 1
-        }, 
-        {
-            "source": 21, 
-            "target": 11
-        }, 
-        {
-            "source": 14, 
-            "target": 18
-        }, 
-        {
-            "source": 0, 
-            "target": 18
-        }, 
-        {
-            "source": 21, 
-            "target": 18
-        }, 
-        {
-            "source": 14, 
-            "target": 4
-        }, 
-        {
-            "source": 0, 
-            "target": 4
-        }, 
-        {
-            "source": 21, 
-            "target": 4
-        }, 
-        {
-            "source": 14, 
-            "target": 8
-        }, 
-        {
-            "source": 0, 
-            "target": 8
-        }, 
-        {
-            "source": 21, 
-            "target": 8
-        }, 
-        {
-            "source": 14, 
+            "source": 60, 
             "target": 20
         }, 
         {
-            "source": 0, 
-            "target": 20
+            "source": 60, 
+            "target": 56
         }, 
         {
-            "source": 21, 
-            "target": 20
+            "source": 60, 
+            "target": 37
         }, 
         {
-            "source": 14, 
-            "target": 3
+            "source": 60, 
+            "target": 5
         }, 
         {
-            "source": 0, 
-            "target": 3
+            "source": 60, 
+            "target": 30
         }, 
         {
-            "source": 21, 
-            "target": 3
+            "source": 60, 
+            "target": 43
         }, 
         {
-            "source": 21, 
+            "source": 60, 
+            "target": 8
+        }, 
+        {
+            "source": 60, 
+            "target": 86
+        }, 
+        {
+            "source": 60, 
+            "target": 49
+        }, 
+        {
+            "source": 60, 
+            "target": 34
+        }, 
+        {
+            "source": 60, 
             "target": 10
         }, 
         {
-            "source": 14, 
-            "target": 13
+            "source": 10, 
+            "target": 60
         }, 
         {
-            "source": 0, 
-            "target": 13
+            "source": 60, 
+            "target": 45
         }, 
         {
-            "source": 14, 
-            "target": 7
-        }, 
-        {
-            "source": 0, 
-            "target": 7
-        }, 
-        {
-            "source": 14, 
+            "source": 60, 
             "target": 12
         }, 
         {
-            "source": 0, 
-            "target": 12
+            "source": 60, 
+            "target": 18
+        }, 
+        {
+            "source": 60, 
+            "target": 11
+        }, 
+        {
+            "source": 60, 
+            "target": 21
+        }, 
+        {
+            "source": 60, 
+            "target": 29
+        }, 
+        {
+            "source": 60, 
+            "target": 36
+        }, 
+        {
+            "source": 60, 
+            "target": 88
+        }, 
+        {
+            "source": 60, 
+            "target": 69
+        }, 
+        {
+            "source": 60, 
+            "target": 46
+        }, 
+        {
+            "source": 60, 
+            "target": 59
+        }, 
+        {
+            "source": 60, 
+            "target": 68
+        }, 
+        {
+            "source": 60, 
+            "target": 55
+        }, 
+        {
+            "source": 60, 
+            "target": 95
+        }, 
+        {
+            "source": 60, 
+            "target": 83
+        }, 
+        {
+            "source": 60, 
+            "target": 44
+        }, 
+        {
+            "source": 60, 
+            "target": 16
+        }, 
+        {
+            "source": 60, 
+            "target": 65
+        }, 
+        {
+            "source": 60, 
+            "target": 67
+        }, 
+        {
+            "source": 60, 
+            "target": 76
+        }, 
+        {
+            "source": 76, 
+            "target": 60
+        }, 
+        {
+            "source": 60, 
+            "target": 77
+        }, 
+        {
+            "source": 60, 
+            "target": 27
+        }, 
+        {
+            "source": 60, 
+            "target": 47
+        }, 
+        {
+            "source": 60, 
+            "target": 4
+        }, 
+        {
+            "source": 60, 
+            "target": 23
+        }, 
+        {
+            "source": 60, 
+            "target": 92
+        }, 
+        {
+            "source": 60, 
+            "target": 13
+        }, 
+        {
+            "source": 60, 
+            "target": 82
+        }, 
+        {
+            "source": 60, 
+            "target": 42
+        }, 
+        {
+            "source": 60, 
+            "target": 26
+        }, 
+        {
+            "source": 60, 
+            "target": 54
+        }, 
+        {
+            "source": 60, 
+            "target": 31
+        }, 
+        {
+            "source": 60, 
+            "target": 70
+        }, 
+        {
+            "source": 60, 
+            "target": 57
+        }, 
+        {
+            "source": 60, 
+            "target": 40
+        }, 
+        {
+            "source": 60, 
+            "target": 24
+        }, 
+        {
+            "source": 60, 
+            "target": 61
+        }, 
+        {
+            "source": 60, 
+            "target": 48
+        }, 
+        {
+            "source": 60, 
+            "target": 84
+        }, 
+        {
+            "source": 60, 
+            "target": 50
+        }, 
+        {
+            "source": 60, 
+            "target": 78
+        }, 
+        {
+            "source": 60, 
+            "target": 94
+        }, 
+        {
+            "source": 60, 
+            "target": 14
+        }, 
+        {
+            "source": 60, 
+            "target": 79
+        }, 
+        {
+            "source": 60, 
+            "target": 89
+        }, 
+        {
+            "source": 60, 
+            "target": 1
+        }, 
+        {
+            "source": 60, 
+            "target": 52
+        }, 
+        {
+            "source": 60, 
+            "target": 63
+        }, 
+        {
+            "source": 60, 
+            "target": 9
+        }, 
+        {
+            "source": 60, 
+            "target": 93
+        }, 
+        {
+            "source": 60, 
+            "target": 22
+        }, 
+        {
+            "source": 60, 
+            "target": 33
+        }, 
+        {
+            "source": 60, 
+            "target": 62
+        }, 
+        {
+            "source": 60, 
+            "target": 66
+        }, 
+        {
+            "source": 60, 
+            "target": 72
+        }, 
+        {
+            "source": 60, 
+            "target": 91
+        }, 
+        {
+            "source": 60, 
+            "target": 38
+        }, 
+        {
+            "source": 60, 
+            "target": 35
+        }, 
+        {
+            "source": 60, 
+            "target": 39
+        }, 
+        {
+            "source": 60, 
+            "target": 28
+        }, 
+        {
+            "source": 60, 
+            "target": 3
+        }, 
+        {
+            "source": 60, 
+            "target": 15
+        }, 
+        {
+            "source": 60, 
+            "target": 41
+        }, 
+        {
+            "source": 60, 
+            "target": 73
+        }, 
+        {
+            "source": 7, 
+            "target": 60
         }
     ]
 }

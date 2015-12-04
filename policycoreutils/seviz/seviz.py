@@ -3,6 +3,7 @@ import SimpleHTTPServer
 import json
 import logging
 import os
+import socket
 import SocketServer
 import subprocess
 import sys
@@ -56,6 +57,7 @@ def parse_cli_args():
     parser.add_argument("-d", "--debug", action="store_true", help="Debugging output")
     parser.add_argument("-b", "--board_dir", help="Parse additional board files in given dir", default="")
     parser.add_argument("-l", "--layout", help="Specify the layout for the visualization", default="graph")
+    parser.add_argument("-p", "--port", help="Port number for local web server", default=8000, type=int)
     parser.add_argument("-w", "--web", help="Disable the webserver to serve viz", default=True, action="store_false")
     return parser.parse_args()
 
@@ -128,7 +130,7 @@ def sanitize_expansions(m4_text):
     for i, line in enumerate(lines):
         if line.startswith(";"):
             syncline = find_m4_syncline(lines, i)
-            logging.warn("Invalid line in m4 expansion, line number %s. Run with --debug to output expansion file.\n"
+            logging.debug("Invalid line in m4 expansion, line number %s. Run with --debug to output expansion file.\n"
                          "Problem likely originates in file: %s\n"
                          "Possibly due to trailing semicolon in te file macro.\n"
                          "Line: %s" % (i, syncline, repr(line)))
@@ -270,6 +272,9 @@ def find_nodes_edges(pol):
 
 
 def create_maps(policy):
+    """Iterate the policy rules parsed, and build the models from them that will be used
+    as data for the visualizations.
+    """
     for p in policy:
         p = p[0]
         if isinstance(p, sepolgen.refpolicy.Attribute):
@@ -449,31 +454,67 @@ def create_visual(policy, layout):
         sys.exit(1)
 
 
-def start_web_server():
+def start_web_server(port):
     SocketServer.TCPServer.allow_reuse_address = True
-    httpd = SocketServer.TCPServer(("", 8000), SimpleHTTPServer.SimpleHTTPRequestHandler)
+    httpd = None
     try:
+        httpd = SocketServer.TCPServer(("", port), SimpleHTTPServer.SimpleHTTPRequestHandler)
         httpd.serve_forever()
     except KeyboardInterrupt:
         pass
+    except socket.error as se:
+        if se.errno == 13:
+            logging.error("Permission denied on socket %s. Try a higher port." % port)
+        else:
+            logging.error(se)
     finally:
-        httpd.shutdown()
-        httpd.socket.close()
+        if httpd:
+            httpd.shutdown()
+            httpd.socket.close()
+
+
+def types_metadata():
+    sources = []
+    targets = []
+    mix = []
+    for t in types:
+        if types[t]["src_cnt"] == 0 and types[t]["tgt_cnt"] != 0:
+            targets.append(t)
+        elif types[t]["src_cnt"] != 0 and types[t]["tgt_cnt"] == 0:
+            sources.append(t)
+        elif types[t]["src_cnt"] != 0 and types[t]["tgt_cnt"] != 0:
+            mix.append(t)
+        else:
+            logging.debug("Unused type: %s" % t)
+    types["metadata"] = {}
+    types["metadata"]["sources"] = sources
+    types["metadata"]["src_cnt"] = len(sources)
+    types["metadata"]["targets"] = targets
+    types["metadata"]["tgt_cnt"] = len(targets)
+    types["metadata"]["mix"] = mix
+    types["metadata"]["mix_cnt"] = len(mix)
 
 
 def dump_maps():
+    types_metadata()
     try:
         with open("types.json", "w") as fout_types,\
+                open("aliases.json", "w") as fout_aliases,\
                 open("attrs.json", "w") as fout_attrs,\
                 open("classes.json", "w") as fout_classes:
-            json.dump(types, fout_types, indent=4, sort_keys=True)
+            json.dump(aliases, fout_aliases, indent=4, sort_keys=True)
             json.dump(attrs, fout_attrs, indent=4, sort_keys=True)
             json.dump(classes, fout_classes, indent=4, sort_keys=True)
+            json.dump(types, fout_types, indent=4, sort_keys=True)
     except (IOError, OSError) as e:
         logging.warn("Could not write debug file: %s" % e)
 
 
 def main(args):
+    """
+    Start by ordering the files in the policy and board directories.
+    Then expand the macros with m4.
+    """
     expanded = preprocess([args.policy_dir, args.board_dir])
     if args.debug:
         try:
@@ -486,22 +527,33 @@ def main(args):
     """
     expanded = sanitize_expansions(expanded)
 
+    """
+    Parse the macro expanded data
+    """
     policy = policy_from_source(expanded)
     if not policy:
         logging.error("Parsing returned empty result")
         sys.exit(1)
 
+    """
+    Create data sources from policy model
+    """
     create_maps(policy)
     if args.debug:
         dump_maps()
 
+    """
+    Create visual transforms model data into the correct json output for a particular layout
+    """
     create_visual(policy, args.layout)
 
+    """
+    Create the root index.html in the working directory for a particular layout
+    """
     index_from_template(args.layout)
-
     if args.web:
-        print 'start'
-        start_web_server()
+        print "Starting local web server: http://localhost:%s" % args.port
+        start_web_server(args.port)
 
 
 if __name__ == "__main__":
