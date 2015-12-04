@@ -168,7 +168,7 @@ def add_class(class_):
 
 def add_type(type_):
     if type_ not in types:
-        types[type_] = {"aliases": [], "attributes": [], "classes": [], "src_cnt": 0, "tgt_cnt": 0}
+        types[type_] = {"aliases": [], "attributes": [], "classes": [], "permissions": {}, "src_cnt": 0, "tgt_cnt": 0}
 
 
 def add_type_src(type_):
@@ -179,6 +179,17 @@ def add_type_src(type_):
 def add_type_tgt(type_):
     add_type(type_)
     types[type_]["tgt_cnt"] += 1
+
+
+def add_permission(src, tgt, perm):
+    if tgt.startswith("-"):
+        return
+    add_type(src)
+    add_type(tgt)
+    try:
+        types[src]["permissions"][perm].append(tgt)
+    except KeyError:
+        types[src]["permissions"][perm] = [tgt]
 
 
 def map_type_class(class_, type_):
@@ -296,10 +307,12 @@ def create_maps(policy):
                     continue
                 add_type_src(src)
                 for tgt in p.tgt_types:
-                    if tgt.startswith("-") or tgt == "*":
-                        continue
                     if tgt == "self":
                         tgt = src
+                    for permission in p.perms:
+                        add_permission(src, tgt, permission)
+                    if tgt.startswith("-") or tgt == "*":
+                        continue
                     add_type_tgt(tgt)
                     for cls in p.obj_classes:
                         map_type_class(cls, tgt)
