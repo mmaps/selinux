@@ -1,0 +1,11 @@
+.node circle {
+    fill: blue;
+    stroke: blue;
+    stroke-width: 2px;
+}
+
+.link {
+    fill: none;
+    stroke: black;
+    stroke-width: 2px;
+}

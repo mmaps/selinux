@@ -418,7 +418,6 @@ def build_hive(policy):
     for edge in edges:
         edge["imports"] = edge["target"]
 
-    #json.dump({"nodes": nodes, "links": edges}, fout, indent=4)
     json_dump([n[k] for k in n.keys()], "hive")
 
 
@@ -446,11 +445,9 @@ def build_chord(policy):
     fout.close()
 
 
-def index_from_template(layout):
-    with open("templates/index.html", "r") as fin, open("index.html", "w") as fout:
-        text = fin.read()
-        text = text % (layout, layout)
-        fout.write(text)
+def build_tree(policy):
+    pol_model = {"classes": classes, "attrs": attrs, "aliases": aliases, "types": types}
+    json_dump(pol_model, "sepol")
 
 
 def create_visual(policy, layout):
@@ -462,9 +459,18 @@ def create_visual(policy, layout):
         build_hive(policy)
     elif layout == "chord":
         build_chord(policy)
+    elif layout == "tree":
+        build_tree(policy)
     else:
         logging.error("Unknown layout: %s\nOptions are graph, supergraph, hive, chord")
         sys.exit(1)
+
+
+def index_from_template(layout):
+    with open("templates/index.html", "r") as fin, open("index.html", "w") as fout:
+        text = fin.read()
+        text = text % (layout, layout)
+        fout.write(text)
 
 
 def start_web_server(port):
