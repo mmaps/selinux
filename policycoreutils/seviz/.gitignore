@@ -100,5 +100,5 @@ Session.vim
 
 ### Added by moappel
 index.html
-data/
+*.json
 *.te
