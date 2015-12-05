@@ -445,9 +445,19 @@ def build_chord(policy):
     fout.close()
 
 
+def TreeNode(name, parent="null", children=[]):
+    return {"name": name, "parent": parent, "children": []}
+
+
 def build_tree(policy):
-    pol_model = {"classes": classes, "attrs": attrs, "aliases": aliases, "types": types}
-    json_dump(pol_model, "sepol")
+    root = TreeNode("SELinux")
+    for class_ in classes:
+        class_node = TreeNode(class_, root["name"])
+        for type_ in classes[class_]["types"]:
+            type_node = TreeNode(type_, class_node["name"])
+            type_node["children"].append(type_node)
+        root["children"].append(class_node)
+    json_dump(root, "sepol")
 
 
 def create_visual(policy, layout):

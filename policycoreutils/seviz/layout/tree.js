@@ -2,25 +2,26 @@ var margin = {top: 20, right: 120, bottom: 20, left: 120},
 	width = 960 - margin.right - margin.left,
 	height = 500 - margin.top - margin.bottom;
 
+var diameter = 1024;
+
 var i = 0;
 
 var tree = d3.layout.tree()
-    .size([height, width]);
+    .size([360, diameter/2 - 120]);
 
-var diagonal = d3.svg.diagonal()
-    .projection(function(d) { return [d.y, d.x]; });
+var diagonal = d3.svg.diagonal.radial()
+    .projection(function(d) { return [d.y, d.x / 180 * Math.PI]; });
 
 var svg = d3.select("body").append("svg")
-	.attr("width", width + margin.right + margin.left)
-	.attr("height", height + margin.top + margin.bottom)
-  .append("tree")
-	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
+    .attr("width", diameter)
+    .attr("height", diameter - 150)
+    .append("g")
+    .attr("transform", "translate(" + diameter/2 + "," + diameter/2 + ")");
 
 d3.json("data/sepol.json", function(error, data) {
     if(error) throw error;
 
-    var root = create_treedata(data);
+    var root = data;
       // Compute the new tree layout.
 
   var nodes = tree.nodes(root).reverse(),
@@ -30,14 +31,14 @@ d3.json("data/sepol.json", function(error, data) {
   nodes.forEach(function(d) { d.y = d.depth * 180; });
 
   // Declare the nodes…
-  var node = svg.selectAll("tree.node")
+  var node = svg.selectAll("g.node")
 	  .data(nodes, function(d) { return d.id || (d.id = ++i); });
 
   // Enter the nodes.
-  var nodeEnter = node.enter().append("tree")
+  var nodeEnter = node.enter().append("g")
 	  .attr("class", "node")
 	  .attr("transform", function(d) {
-		  return "translate(" + d.y + "," + d.x + ")"; });
+		  return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")"; });
 
   nodeEnter.append("circle")
 	  .attr("r", 10)
@@ -57,33 +58,7 @@ d3.json("data/sepol.json", function(error, data) {
 	  .data(links, function(d) { return d.target.id; });
 
   // Enter the links.
-  link.enter().insert("path", "tree")
+  link.enter().insert("path", "g")
 	  .attr("class", "link")
 	  .attr("d", diagonal);
 });
-
-function create_treedata(data) {
-    var treeData = {"name": "Classes", "parent": null, "children": []};
-    var classes = data.classes;
-
-    for (var key in classes) {
-        if(classes.hasOwnProperty(key)){
-            var seClass = classes[key];
-            console.log(key);
-            console.log(seClass);
-            var classNode = {"name": seClass, "parent": "Classes", "children": []};
-
-            treeData.children.push(classNode);
-
-            seClass.types.forEach(function (seClassType) {
-                console.log(seClassType);
-                classNode.children.push({"name": seClassType.toString(), "parent": seClass, "children": []});
-            });
-        }
-    }
-
-    console.log(treeData);
-
-    return treeData;
-}
-
