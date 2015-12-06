@@ -445,17 +445,22 @@ def build_chord(policy):
     fout.close()
 
 
-def TreeNode(name, parent="null", children=[]):
-    return {"name": name, "parent": parent, "children": []}
+def TreeNode(name, parent="null", node_type="type"):
+    return {"name": name, "parent": parent, "children": [], "nodeType": node_type}
 
 
 def build_tree(policy):
-    root = TreeNode("SELinux")
+    root = TreeNode("SELinux", node_type="root")
     for class_ in classes:
         class_node = TreeNode(class_, root["name"])
         for type_ in classes[class_]["types"]:
             type_node = TreeNode(type_, class_node["name"])
             type_node["children"].append(type_node)
+            for perm in types[type_]["permissions"]:
+                perm_node = TreeNode(perm, parent=type_, node_type="permission")
+                for target in types[type_]["permissions"][perm]:
+                    tgt_node = TreeNode(target, parent=perm)
+                    perm_node["children"].append(tgt_node)
         root["children"].append(class_node)
     json_dump(root, "sepol")
 
