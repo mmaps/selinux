@@ -11,38 +11,21 @@
 </head>
 <body>
     <script type="text/javascript">
-    (function(){
-        //do init stuff here
-
-    })();
     	function backButtonClick(){
             var node = nodeStack.pop();
             if(node == undefined){
     		  //drawGraph(root);
-              //forwardNode = currentNode;
               //currentNode = root;
               alert(1);
               return;
             }
-            //forwardNode = currentNode;
             //drawGraph(node);
             //currentNode = node;
-    	}
-
-    	function forwardButtonClick(){
-            if(forwardNode == null)
-                return;
-            //drawGraph(forwardNode)
-            //nodeStack.push(currentNode);
-            //currentNode = forwardNode;
-            forwardNode = null;
     	}
 
     	function changeHandler(){
             var d = document.getElementById("navDropDown");
             var val = d[d.selectedIndex].value;
-            var obj = JSON.parse(val);
-    		alert(obj.b);
             //drawGraph(val);
             //nodeStack.push(currentNode);
             //currentNode = val;
@@ -51,11 +34,10 @@
     <div id="meta-data">
     </div>
     <div id="ui-control">
-    	<button id="backButton" class="navButton" onclick="backButtonClick()">&#8592</button>
-    	<button id="forwardButton" class="navButton" onclick="forwardButtonClick()">&#8594</button>
-    	<select id="navDropDown" onchange="changeHandler()">
+    	<button id="backButton" class="navButton" onclick="backButtonClick()" style="visibility:hidden">&#8592</button>
+    	<select id="navDropDown" onchange="changeHandler()" style="visibility:hidden">
     		<option value="-1">Select a Node</option>
-            <option value='{"a":1, "b":2}'>test opt</option>
+            <!--<option value='{"a":1, "b":2}'>test opt</option>-->
     	</select>
     </br>
     <!--
@@ -69,5 +51,12 @@
     <div id="data-viz">
     </div>
     <script type="text/javascript" src="layout/%s.js"></script>
+    <script type="text/javascript">
+        (function(){
+        //unhide user controls
+            document.getElementById("backButton").style.visibility = "";
+            document.getElementById("navDropDown").style.visibility = "";
+    })();
+    </script>
 </body>
 </html>
