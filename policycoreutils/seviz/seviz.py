@@ -56,6 +56,7 @@ def parse_cli_args():
     parser.add_argument("policy_dir", help="Directory containing policy source files")
     parser.add_argument("-d", "--debug", action="store_true", help="Debugging output")
     parser.add_argument("-b", "--board_dir", help="Parse additional board files in given dir", default="")
+    parser.add_argument("-c", "--seclass", help="The class of types to display in layout", default="process")
     parser.add_argument("-l", "--layout", help="Specify the layout for the visualization", default="graph")
     parser.add_argument("-p", "--port", help="Port number for local web server", default=8000, type=int)
     parser.add_argument("-w", "--web", help="Disable the webserver to serve viz", default=True, action="store_false")
@@ -449,28 +450,31 @@ def TreeNode(name, parent, node_type):
     return {"name": name, "parent": parent, "children": [], "nodeType": node_type}
 
 
-def build_tree(policy):
-    root = TreeNode("SELinux", parent="null", node_type="root")
+def build_tree(root_class):
+    root = TreeNode(root_class, parent="null", node_type="root")
     for class_ in classes:
-        class_node = TreeNode(class_, root["name"], "class")
-        root["children"].append(class_node)
+        if class_ == root_class:
+            class_node = TreeNode(class_, root["name"], "class")
+            root["children"].append(class_node)
 
-        for type_ in classes[class_]["types"]:
-            type_node = TreeNode(type_, class_node["name"], "type")
-            class_node["children"].append(type_node)
+            for type_ in classes[class_]["types"]:
+                type_node = TreeNode(type_, class_node["name"], "type")
+                class_node["children"].append(type_node)
 
-            for perm in types[type_]["permissions"]:
-                perm_node = TreeNode(perm, type_, "permission")
-                type_node["children"].append(perm_node)
+                for perm in types[type_]["permissions"]:
+                    perm_node = TreeNode(perm, type_, "permission")
+                    type_node["children"].append(perm_node)
 
-                for target in types[type_]["permissions"][perm]:
-                    tgt_node = TreeNode(target, perm, "type")
-                    perm_node["children"].append(tgt_node)
+                    for target in types[type_]["permissions"][perm]:
+                        tgt_node = TreeNode(target, perm, "type")
+                        perm_node["children"].append(tgt_node)
+        break
 
     json_dump(root, "sepol")
 
 
-def create_visual(policy, layout):
+def create_visual(policy, args):
+    layout = args.layout
     if layout == "graph":
         build_graph(policy)
     elif layout == "supergraph":
@@ -480,7 +484,7 @@ def create_visual(policy, layout):
     elif layout == "chord":
         build_chord(policy)
     elif layout == "tree":
-        build_tree(policy)
+        build_tree(args.seclass)
     else:
         logging.error("Unknown layout: %s\nOptions are graph, supergraph, hive, chord")
         sys.exit(1)
@@ -584,7 +588,7 @@ def main(args):
     """
     Create visual transforms model data into the correct json output for a particular layout
     """
-    create_visual(policy, args.layout)
+    create_visual(policy, args)
 
     """
     Create the root index.html in the working directory for a particular layout
