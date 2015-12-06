@@ -6,11 +6,60 @@
     <script type="text/javascript" src="lib/d3/d3.js"></script>
     <script type="text/javascript" src="lib/d3/d3.hive.min.js"></script>
     <script type="text/javascript" src="lib/utils.js"></script>
+    <script type="text/javascript" src="lib/globals.js"></script>
     <link rel="stylesheet" type="text/css" href="css/%s.css">
 </head>
 <body>
-    <div id="meta-data"></div>
-    <div id="data-viz"></div>
+    <script type="text/javascript">
+    	function backButtonClick(){
+            var node = nodeStack.pop();
+            if(node == undefined){
+    		  //drawGraph(root);
+              //forwardNode = currentNode;
+              //currentNode = root;
+              alert(1);
+              return;
+            }
+            //forwardNode = currentNode;
+            //drawGraph(node);
+            //currentNode = node;
+    	}
+
+    	function forwardButtonClick(){
+            if(forwardNode == null)
+                return;
+            //drawGraph(forwardNode)
+            //nodeStack.push(currentNode);
+            //currentNode = forwardNode;
+            forwardNode = null;
+    	}
+
+    	function changeHandler(){
+            var d = document.getElementById("navDropDown");
+            var val = d[d.selectedIndex].value
+    		alert(val);
+            //drawGraph(val);
+            //nodeStack.push(currentNode);
+            //currentNode = val;
+    	}
+    </script>
+    <div id="meta-data">
+    </div>
+    <div id="ui-control">
+    	<button id="backButton" class="navButton" onclick="backButtonClick()">&#8592</button>
+    	<button id="forwardButton" class="navButton" onclick="forwardButtonClick()">&#8594</button>
+    	<select id="navDropDown" onchange="changeHandler()">
+    		<option value="-1">Select a Node</option>
+            <option value="-2">test opt</option>
+    	</select>
+    </br>
+    <details open="true">
+    	<summary>Selected Node Data</summary>
+    	<p id="nodeDetails">so much more data to go here!</p>
+    </details>
+    </div>
+    <div id="data-viz">
+    </div>
     <script type="text/javascript" src="layout/%s.js"></script>
 </body>
 </html>
