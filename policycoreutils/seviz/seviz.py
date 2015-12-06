@@ -445,23 +445,28 @@ def build_chord(policy):
     fout.close()
 
 
-def TreeNode(name, parent="null", node_type="type"):
+def TreeNode(name, parent, node_type):
     return {"name": name, "parent": parent, "children": [], "nodeType": node_type}
 
 
 def build_tree(policy):
-    root = TreeNode("SELinux", node_type="root")
+    root = TreeNode("SELinux", parent="null", node_type="root")
     for class_ in classes:
-        class_node = TreeNode(class_, root["name"])
-        for type_ in classes[class_]["types"]:
-            type_node = TreeNode(type_, class_node["name"])
-            type_node["children"].append(type_node)
-            for perm in types[type_]["permissions"]:
-                perm_node = TreeNode(perm, parent=type_, node_type="permission")
-                for target in types[type_]["permissions"][perm]:
-                    tgt_node = TreeNode(target, parent=perm)
-                    perm_node["children"].append(tgt_node)
+        class_node = TreeNode(class_, root["name"], "class")
         root["children"].append(class_node)
+
+        for type_ in classes[class_]["types"]:
+            type_node = TreeNode(type_, class_node["name"], "type")
+            class_node["children"].append(type_node)
+
+            for perm in types[type_]["permissions"]:
+                perm_node = TreeNode(perm, type_, "permission")
+                type_node["children"].append(perm_node)
+
+                for target in types[type_]["permissions"][perm]:
+                    tgt_node = TreeNode(target, perm, "type")
+                    perm_node["children"].append(tgt_node)
+
     json_dump(root, "sepol")
 
 
