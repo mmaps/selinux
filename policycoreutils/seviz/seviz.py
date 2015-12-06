@@ -453,6 +453,7 @@ def TreeNode(name, parent, node_type):
 def build_tree(root_class):
     root = TreeNode(root_class, parent="null", node_type="root")
     for class_ in classes:
+        print class_,"vs",root_class
         if class_ == root_class:
             class_node = TreeNode(class_, root["name"], "class")
             root["children"].append(class_node)
@@ -468,7 +469,7 @@ def build_tree(root_class):
                     for target in types[type_]["permissions"][perm]:
                         tgt_node = TreeNode(target, perm, "type")
                         perm_node["children"].append(tgt_node)
-        break
+            break
 
     json_dump(root, "sepol")
 
