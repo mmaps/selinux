@@ -11,6 +11,9 @@
 </head>
 <body>
     <script type="text/javascript">
+    document.ready(function(){
+        //do init stuff here
+    });
     	function backButtonClick(){
             var node = nodeStack.pop();
             if(node == undefined){
@@ -53,6 +56,9 @@
             <option value="-2">test opt</option>
     	</select>
     </br>
+    <!-->
+    NOTE: details tag only supported in Chrome Safari and Opera, may want to replace with a different tag
+    </-->
     <details open="true">
     	<summary>Selected Node Data</summary>
     	<p id="nodeDetails">so much more data to go here!</p>
