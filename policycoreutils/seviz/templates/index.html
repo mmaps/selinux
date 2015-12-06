@@ -11,9 +11,10 @@
 </head>
 <body>
     <script type="text/javascript">
-    document.ready(function(){
+    (function(){
         //do init stuff here
-    });
+
+    })();
     	function backButtonClick(){
             var node = nodeStack.pop();
             if(node == undefined){
@@ -39,8 +40,9 @@
 
     	function changeHandler(){
             var d = document.getElementById("navDropDown");
-            var val = d[d.selectedIndex].value
-    		alert(val);
+            var val = d[d.selectedIndex].value;
+            var obj = JSON.parse(val);
+    		alert(obj.b);
             //drawGraph(val);
             //nodeStack.push(currentNode);
             //currentNode = val;
@@ -53,7 +55,7 @@
     	<button id="forwardButton" class="navButton" onclick="forwardButtonClick()">&#8594</button>
     	<select id="navDropDown" onchange="changeHandler()">
     		<option value="-1">Select a Node</option>
-            <option value="-2">test opt</option>
+            <option value='{"a":1, "b":2}'>test opt</option>
     	</select>
     </br>
     <!--
