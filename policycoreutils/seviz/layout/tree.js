@@ -138,6 +138,7 @@ var TreeChart = function() {
     var nEnter = n.enter().append("g")
       .attr("class", "node")
       .attr("transform", function(d) { return "translate(" + root.y + "," + root.x + ")" ;})
+      .style("fill", getNodeColor)
       .on("click", clickHandler);
 
     nEnter.append("circle")
@@ -164,9 +165,7 @@ var TreeChart = function() {
 
     nUpdate.select("circle")
       .attr("r", 5)
-      .style("fill", function(d) {
-        return d._children ? "lightsteelblue" : "#fff";
-      });
+      .style("fill", getNodeColor);
 
     nUpdate.select("text")
       .style("fill-opacity", 1);
@@ -213,6 +212,20 @@ var TreeChart = function() {
     if (n.collapsed) {
       expandNode(n);
       n.children.forEach(expandAll);
+    }
+  }
+
+  function getNodeColor(n) {
+    switch(n.nodeType) {
+      case "class":
+            return googleR;
+      case "type":
+            return googleB;
+      case "permission":
+            return googleY;
+      default:
+            console.log("Unknown node type: " + n.nodeType);
+            return "black";
     }
   }
 

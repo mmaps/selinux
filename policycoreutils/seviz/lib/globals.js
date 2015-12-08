@@ -31,3 +31,13 @@ function NodeIndex() {
 }
 
 var nodeIndex = new NodeIndex();
+
+
+/*
+Google colors: https://sites.google.com/site/uwugc2012/event-resources-and-calendar/event-planning-print-materials
+ */
+googleR = "#D40F25";
+googleG = "#009925";
+googleB = "#3369E8";
+googleY = "#EEB211";
+googleGray = "#666666";

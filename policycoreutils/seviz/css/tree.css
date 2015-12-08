@@ -3,13 +3,19 @@
 }
 
 .node circle {
-    fill: blue;
-    stroke: blue;
+    fill: darkgrey;
+    stroke: darkgrey;
     stroke-width: 1px;
 }
 
 .link {
     fill: none;
-    stroke: #ccc;
+    stroke: darkgrey;
     stroke-width: 1px;
+}
+
+.label {
+    font-family: monospace;
+    font-size: .75em;
+    fill: #666666;
 }
