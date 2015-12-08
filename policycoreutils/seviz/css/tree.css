@@ -1,3 +1,7 @@
+.node {
+    cursor: pointer;
+}
+
 .node circle {
     fill: blue;
     stroke: blue;
@@ -6,6 +10,6 @@
 
 .link {
     fill: none;
-    stroke: black;
+    stroke: #ccc;
     stroke-width: 1px;
 }

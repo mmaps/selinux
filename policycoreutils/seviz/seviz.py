@@ -451,24 +451,40 @@ def TreeNode(name, parent, node_type):
 
 
 def build_tree(root_class):
+    """
     root = TreeNode(root_class, parent="null", node_type="root")
+    class_ = classes.get(root_class)
+    if class_:
+        #class_node = TreeNode(class_, root["name"], "class")
+        #root["children"].append(class_node)
+        for type_ in class_["types"]:
+            type_node = TreeNode(type_, root["name"], "type")
+            root["children"].append(type_node)
+
+            for perm in types[type_]["permissions"]:
+                perm_node = TreeNode(perm, type_, "permission")
+                type_node["children"].append(perm_node)
+
+                for target in types[type_]["permissions"][perm]:
+                    tgt_node = TreeNode(target, perm, "type")
+                    perm_node["children"].append(tgt_node)
+    """
+    root = TreeNode("SELinux", parent="null", node_type="root")
     for class_ in classes:
-        if class_ == root_class:
-            class_node = TreeNode(class_, root["name"], "class")
-            root["children"].append(class_node)
+        class_node = TreeNode(class_, root["name"], "class")
+        root["children"].append(class_node)
 
-            for type_ in classes[class_]["types"]:
-                type_node = TreeNode(type_, class_node["name"], "type")
-                class_node["children"].append(type_node)
+        for type_ in classes[class_]["types"]:
+            type_node = TreeNode(type_, class_node["name"], "type")
+            class_node["children"].append(type_node)
 
-                for perm in types[type_]["permissions"]:
-                    perm_node = TreeNode(perm, type_, "permission")
-                    type_node["children"].append(perm_node)
+            for perm in types[type_]["permissions"]:
+                perm_node = TreeNode(perm, type_, "permission")
+                type_node["children"].append(perm_node)
 
-                    for target in types[type_]["permissions"][perm]:
-                        tgt_node = TreeNode(target, perm, "type")
-                        perm_node["children"].append(tgt_node)
-            break
+                for target in types[type_]["permissions"][perm]:
+                    tgt_node = TreeNode(target, perm, "type")
+                    perm_node["children"].append(tgt_node)
 
     json_dump(root, "sepol")
 
