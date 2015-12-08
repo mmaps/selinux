@@ -11,34 +11,27 @@
 </head>
 <body>
     <script type="text/javascript">
-    	function backButtonClick(){
-            var node = nodeStack.pop();
-            if(node == undefined){
-    		  //drawGraph(root);
-              //currentNode = root;
-              alert(1);
-              return;
-            }
-            //drawGraph(node);
-            //currentNode = node;
-    	}
-
-    	function changeHandler(){
-            var d = document.getElementById("navDropDown");
+    	function classChangeHandler(){
+            var d = document.getElementById("classDropDown");
             var val = d[d.selectedIndex].value;
             //drawGraph(val);
-            //nodeStack.push(currentNode);
-            //currentNode = val;
     	}
+        function typeChangeHandler(){
+            var d = document.getElementById("typeDropDown");
+            var val = d[d.selectedIndex].value;
+            //drawGraph(val);
+        }
     </script>
     <div id="meta-data">
     </div>
     <div id="ui-control">
-    	<button id="backButton" class="navButton" onclick="backButtonClick()" style="visibility:hidden">&#8592</button>
-    	<select id="navDropDown" onchange="changeHandler()" style="visibility:hidden">
+    	<select id="classDropDown" onchange="classChangeHandler()" style="visibility:hidden">
     		<option value="-1">Select a Node</option>
             <!--<option value='{"a":1, "b":2}'>test opt</option>-->
     	</select>
+        <select id="typeDropDown" onchange="typeChangeHandler()" style="visibility:hidden">
+            <option value="-1">Select a Node</option>
+        </select>
     </br>
     <!--
     NOTE: details tag only supported in Chrome Safari and Opera, may want to replace with a different tag
@@ -54,8 +47,8 @@
     <script type="text/javascript">
         (function(){
         //unhide user controls
-            document.getElementById("backButton").style.visibility = "";
-            document.getElementById("navDropDown").style.visibility = "";
+            document.getElementById("classDropDown").style.visibility = "";
+            document.getElementById("typeDropDown").style.visibility = "";
     })();
     </script>
 </body>
