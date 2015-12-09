@@ -60,6 +60,7 @@ def parse_cli_args():
     parser.add_argument("-b", "--board_dir", help="Parse additional board files in given dir", default="")
     parser.add_argument("-c", "--seclass", help="The class of types to display in layout", default="process")
     parser.add_argument("-l", "--layout", help="Specify the layout for the visualization", default="graph")
+    parser.add_argument("-o", "--output", help="Output file name for sepolicy data. Default = 'sepol.json'", default="sepol.json")
     parser.add_argument("-p", "--port", help="Port number for local web server", default=8000, type=int)
     parser.add_argument("-w", "--web", help="Disable the webserver to serve viz", default=True, action="store_false")
     return parser.parse_args()
@@ -474,7 +475,7 @@ def TreeNode(name, parent, node_type):
     return {"name": name, "parent": parent, "children": [], "nodeType": node_type}
 
 
-def build_tree(root_class):
+def build_tree(args):
     root = TreeNode("SELinux", parent="null", node_type="root")
     for class_ in classes:
         class_node = TreeNode(class_, root["name"], "class")
@@ -491,8 +492,7 @@ def build_tree(root_class):
                 for target in types[type_]["permissions"][perm]:
                     tgt_node = TreeNode(target, perm, "type")
                     perm_node["children"].append(tgt_node)
-
-    update_datafile(root, "sepol.json")
+    update_datafile(root, args.output)
 
 
 def create_visual(policy, args):
@@ -506,7 +506,7 @@ def create_visual(policy, args):
     elif layout == "chord":
         build_chord(policy)
     elif layout == "tree":
-        build_tree(args.seclass)
+        build_tree(args)
     else:
         logging.error("Unknown layout: %s\nOptions are graph, supergraph, hive, chord")
         sys.exit(1)
