@@ -1,4 +1,5 @@
 [
     "sepol.json", 
+    "shamu.json", 
     "default.json"
 ]

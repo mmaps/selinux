@@ -81,7 +81,10 @@ def order_files(default_dir, board_dir):
         return []
 
     def_fnames = os.listdir(default_dir)
-    board_fnames = os.listdir(board_dir)
+    if board_dir:
+        board_fnames = os.listdir(board_dir)
+    else:
+        board_fnames = []
 
     file_seq = []
     for mf in M4_MACRO_FILES:

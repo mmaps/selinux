@@ -45,13 +45,16 @@ var TreeChart = function() {
     data.x0 = height / 2;
     data.y0 = 10;
     tree = d3.layout.tree()
-      .size([height, width]);
+        .nodeSize([10, 10])
+        .separation(function (a, b) {
+          return 2;
+        });
   }
 
 
 
   function redraw(currentRoot) {
-    tree.size([height, width]);
+    //tree.size([height, width]);
 
     var nodes = tree.nodes(data);
     var links = tree.links(nodes);
