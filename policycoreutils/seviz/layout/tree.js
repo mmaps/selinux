@@ -8,6 +8,9 @@ var TreeChart = function() {
   function chart(chartData) {
     data = chartData;
     initTree(data);
+    if (!data.children) {
+      expandNode(data);
+    }
     data.children.forEach(collapseNode);
     redraw(data);
   }
