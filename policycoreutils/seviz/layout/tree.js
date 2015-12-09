@@ -1,6 +1,8 @@
 var TreeChart = function() {
   var data,
-      tree;
+      tree,
+      orientRoot,
+      orient = "v";
 
   var i = 0,
       duration = 500;
@@ -16,7 +18,7 @@ var TreeChart = function() {
   }
 
   var diagonal = d3.svg.diagonal()
-      .projection(function(d) { return [d.y, d.x]; });
+      .projection(diagonalTranslate);
 
   var clickHandler = function(node) {
     if (d3.event.shiftKey) {
@@ -41,12 +43,35 @@ var TreeChart = function() {
     } else if (node.children) {
       collapseNode(node);
     }
-    redraw(node);
+    redraw(orientRoot);
+  }
+
+  function reorient() {
+    switch (orient) {
+      case "v":
+        orient = "h";
+        svg.attr("transform", "translate(" + 50 + "," + height / 2 + ")");
+        break;
+      case "h":
+        orient = "v";
+        svg.attr("transform", "translate(" + width / 2 + "," + 50 + ")");
+        break;
+    }
   }
 
   function initTree(data) {
     data.x0 = height / 2;
     data.y0 = 10;
+
+    var ui = document.getElementById("ui-control");
+    var button = document.createElement("input");
+    button.type = "button";
+    button.value = "Orientation";
+    button.onclick = reorient;
+    ui.appendChild(button);
+
+    svg.attr("transform", "translate(" + 50 + "," + height / 2 + ")");
+
     tree = d3.layout.tree()
         .nodeSize([10, 10])
         .separation(function (a, b) {
@@ -59,10 +84,14 @@ var TreeChart = function() {
     var nodes = tree.nodes(data);
     var links = tree.links(nodes);
 
-    nodes.forEach(function(d) { d.y = d.depth * 150; });
+    nodes.forEach(function (d) {
+      d.y = d.depth * 150;
+    });
 
     var node = svg.selectAll("g.node").data(nodes, function(d) {return d.id || (d.id = ++i);});
     var link = svg.selectAll("path.link").data(links, function(d) {return d.target.id;});
+
+    orientRoot = currentRoot;
 
     enterLinks(currentRoot, link);
     updateLinks(currentRoot, link);
@@ -73,6 +102,33 @@ var TreeChart = function() {
     exitNodes(currentRoot, node);
 
     saveNodePositions(nodes);
+  }
+
+  function rootTranslate(node) {
+    switch (orient) {
+      case "v":
+        return "translate(" + orientRoot.y + "," + orientRoot.x + ")";
+      case "h":
+        return "translate(" + orientRoot.x + "," + orientRoot.y + ")";
+    }
+  }
+
+  function nodeTranslate(node) {
+    switch (orient) {
+      case "v":
+        return "translate(" + node.y + "," + node.x + ")";
+      case "h":
+        return "translate(" + node.x + "," + node.y + ")";
+    }
+  }
+
+  function diagonalTranslate(node) {
+    switch (orient) {
+      case "v":
+        return [node.y, node.x];
+      case "h":
+        return [node.x, node.y];
+    }
   }
 
   function enterLinks(root, l) {
@@ -115,7 +171,7 @@ var TreeChart = function() {
   function enterNodes(root, n) {
     var nEnter = n.enter().append("g")
       .attr("class", "node")
-      .attr("transform", function(d) { return "translate(" + root.y + "," + root.x + ")" ;})
+        .attr("transform", rootTranslate)
       .style("fill", getNodeColor)
       .on("click", clickHandler);
 
@@ -137,9 +193,7 @@ var TreeChart = function() {
   function updateNodes(root, n) {
     var nUpdate = n.transition()
     .duration(duration)
-      .attr("transform", function(d) {
-        return "translate(" + d.y + "," + d.x + ")";
-      });
+        .attr("transform", nodeTranslate);
 
     nUpdate.select("circle")
       .attr("r", 5)
@@ -152,9 +206,7 @@ var TreeChart = function() {
   function exitNodes(root, n) {
     var nExit = n.exit().transition()
       .duration(duration)
-      .attr("transform", function(d) {
-        return "translate(" + root.y + "," + root.x + ")";
-      })
+        .attr("transform", rootTranslate)
       .remove();
 
     nExit.select("circle")
@@ -201,7 +253,7 @@ var TreeChart = function() {
           if(n.optional) {
             return googleG;
           }
-            return googleB;
+        return googleB;
       case "permission":
             return googleY;
       default:
