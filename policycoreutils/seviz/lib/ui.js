@@ -2,7 +2,7 @@ var svg,
     width = .75 * document.documentElement.clientWidth,
     height = .75 * document.documentElement.clientHeight,
     layout,
-    layouts = ["chord", "graph", "hive", "supergraph", "tree"],
+    layouts = ["clusterbundle", "graph", "hive", "supergraph", "tree"],
     layoutMap = {};
 
 layouts.forEach(function(l) {
