@@ -1,0 +1,21 @@
+.node {
+    cursor: pointer;
+}
+
+.node circle {
+    fill: darkgrey;
+    stroke: darkgrey;
+    stroke-width: 1px;
+}
+
+.link {
+    fill: none;
+    stroke: darkgrey;
+    stroke-width: 1px;
+}
+
+.label {
+    font-family: monospace;
+    font-size: .65em;
+    fill: #666666;
+}
