@@ -1,4 +1,4 @@
 [
     "sepol.json", 
-    "process.json"
+    "default.json"
 ]

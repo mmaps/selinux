@@ -1,13 +1,14 @@
+import SimpleHTTPServer
+import SocketServer
 import argparse
 import glob
-import SimpleHTTPServer
 import json
 import logging
 import os
 import socket
-import SocketServer
 import subprocess
 import sys
+
 sys.path.insert(0, "../../sepolgen/src/")
 import sepolgen.refparser
 import sepolgen.refpolicy
@@ -65,17 +66,34 @@ def parse_cli_args():
 
 
 def read_attributes(dir_):
-    with open(os.path.join(dir_, "attributes"), "r") as fin:
-        return fin.read()
+    try:
+        with open(os.path.join(dir_, "attributes"), "r") as fin:
+            return fin.read()
+    except (OSError, IOError):
+        logging.debug("Directory does not have attributes macros")
+        return ''
 
 
-def order_files(dir_):
-    if not dir_ or not os.path.isdir(dir_):
-        logging.error("Invalid directory: %s" % repr(dir_))
+def order_files(default_dir, board_dir):
+    if not default_dir or not os.path.isdir(default_dir):
+        logging.error("Invalid directory: %s" % repr(default_dir))
         return []
-    fnames = os.listdir(dir_)
-    file_seq = [os.path.join(dir_, mf) for mf in M4_MACRO_FILES if mf in fnames]
-    file_seq.extend([os.path.join(dir_, f) for f in fnames if f.endswith(".te")])
+
+    def_fnames = os.listdir(default_dir)
+    board_fnames = os.listdir(board_dir)
+
+    file_seq = []
+    for mf in M4_MACRO_FILES:
+        if mf in def_fnames:
+            file_seq.append(os.path.join(default_dir, mf))
+        if mf in board_fnames:
+            file_seq.append(os.path.join(board_dir, mf))
+    for f in def_fnames:
+        if f.endswith(".te"):
+            file_seq.append(os.path.join(default_dir, f))
+    for f in board_fnames:
+        if f.endswith(".te"):
+            file_seq.append(os.path.join(board_dir, f))
     return file_seq
 
 
@@ -98,13 +116,12 @@ def expand_macros(files):
         return out
 
 
-def preprocess(dir_list):
+def preprocess(default_dir, board_dir):
     file_seq = []
     rv = ""
-    for dir_ in dir_list:
-        if dir_:
-            rv += read_attributes(dir_)
-            file_seq.extend(order_files(dir_))
+    rv += read_attributes(default_dir)
+    rv += read_attributes(board_dir)
+    file_seq.extend(order_files(default_dir, board_dir))
     logging.debug("Preprocess file sequence:\n\t%s" % "\n\t".join(file_seq))
     rv += expand_macros(file_seq)
     return rv
@@ -155,7 +172,7 @@ def policy_from_source(text, policy_mod=None):
 
 def add_alias(alias):
     if alias not in aliases:
-        aliases[alias] = { "types": []}
+        aliases[alias] = {"types": []}
 
 
 def add_attr(attr):
@@ -458,24 +475,6 @@ def TreeNode(name, parent, node_type):
 
 
 def build_tree(root_class):
-    """
-    root = TreeNode(root_class, parent="null", node_type="root")
-    class_ = classes.get(root_class)
-    if class_:
-        #class_node = TreeNode(class_, root["name"], "class")
-        #root["children"].append(class_node)
-        for type_ in class_["types"]:
-            type_node = TreeNode(type_, root["name"], "type")
-            root["children"].append(type_node)
-
-            for perm in types[type_]["permissions"]:
-                perm_node = TreeNode(perm, type_, "permission")
-                type_node["children"].append(perm_node)
-
-                for target in types[type_]["permissions"][perm]:
-                    tgt_node = TreeNode(target, perm, "type")
-                    perm_node["children"].append(tgt_node)
-    """
     root = TreeNode("SELinux", parent="null", node_type="root")
     for class_ in classes:
         class_node = TreeNode(class_, root["name"], "class")
@@ -580,7 +579,7 @@ def main(args):
     Start by ordering the files in the policy and board directories.
     Then expand the macros with m4.
     """
-    expanded = preprocess([args.policy_dir, args.board_dir])
+    expanded = preprocess(args.policy_dir, args.board_dir)
     if args.debug:
         try:
             with open("seviz-expansions.te", "w") as fout:
