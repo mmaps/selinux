@@ -1,8 +1,5 @@
 var TreeChart = function() {
   var data,
-      width,
-      height,
-      svg,
       tree;
 
   var i = 0,
@@ -17,11 +14,6 @@ var TreeChart = function() {
 
   var diagonal = d3.svg.diagonal()
       .projection(function(d) { return [d.y, d.x]; });
-
-  var zoomHandler = d3.behavior.zoom()
-    .on("zoom", function() {
-      d3.select("g").attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
-    });
 
   var clickHandler = function(node) {
     if (d3.event.shiftKey) {
@@ -50,33 +42,16 @@ var TreeChart = function() {
   }
 
   function initTree(data) {
-    width = windowWidth();
-    height = windowHeight();
-
-    data.x0 = width / 2;
+    data.x0 = height / 2;
     data.y0 = 10;
-
-    svg = d3.select("#data-viz").append("svg")
-      .attr("width", width)
-      .attr("height", height)
-      .append("g")
-      .attr("transform", "translate(10, 0)");
-
-    d3.select("svg").call(zoomHandler);
-
     tree = d3.layout.tree()
-      .size([width, height]);
+      .size([height, width]);
   }
 
 
 
   function redraw(currentRoot) {
-    width = windowWidth();
-    height = windowHeight();
-
-    svg.attr("width", width);
-    svg.attr("height", height);
-    tree.size([width, height]);
+    tree.size([height, width]);
 
     var nodes = tree.nodes(data);
     var links = tree.links(nodes);
@@ -220,6 +195,9 @@ var TreeChart = function() {
       case "class":
             return googleR;
       case "type":
+          if(n.optional) {
+            return googleG;
+          }
             return googleB;
       case "permission":
             return googleY;
@@ -250,4 +228,13 @@ function treeFromClass(className) {
   });
 }
 
-treeFromClass("process");
+if(layoutMap) {
+  console.log("Registering tree layout");
+  layoutMap["tree"] = TreeChart();
+  console.log("Updating to tree layout");
+  updateLayout();
+} else {
+  console.log("Tree is not registered");
+}
+
+//treeFromClass("process");

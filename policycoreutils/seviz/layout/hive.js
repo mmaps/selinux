@@ -1,4 +1,9 @@
-// lib_plot.js
+var HiveChart = function (){
+    function chart(data) {
+
+    }
+    return chart;
+};
 
 var setup_plot = function(plot_info) {
 

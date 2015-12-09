@@ -1,7 +1,10 @@
-/*
- * Adapted from simple force layout graph D3 example
- *
- */
+var SuperGraphChart = function (){
+    function chart(data) {
+
+    }
+    return chart;
+};
+
 var width = 1024,
     height = 768;
 

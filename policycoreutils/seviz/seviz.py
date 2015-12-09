@@ -1,4 +1,5 @@
 import argparse
+import glob
 import SimpleHTTPServer
 import json
 import logging
@@ -238,6 +239,18 @@ def map_type_attribute(type_, attr):
         types[type_]["attributes"].append(attr)
 
 
+def update_datafile(obj, fname):
+    json_dump(obj, fname)
+    files = [os.path.basename(f) for f in glob.glob("data/*.json")]
+    json_dump(files, "dataFiles.txt")
+
+
+def json_dump(obj, fname):
+    fout = open("data/%s" % fname, "w")
+    json.dump(obj, fout, indent=4)
+    fout.close()
+
+
 def find_nodes_edges(pol):
     """
     type pol: sepolgen.repolicy.Node
@@ -319,12 +332,6 @@ def create_maps(policy):
                         map_type_class(cls, tgt)
 
 
-def json_dump(obj, fname):
-    fout = open("data/%s.json" % fname, "w")
-    json.dump(obj, fout, indent=4)
-    fout.close()
-
-
 def build_graph(policy):
     nodes = set()
     edges = []
@@ -363,7 +370,7 @@ def build_graph(policy):
         edges[i] = {"source": sidx, "target": tidx}
     nodes = [{"name": n, "type": n} for n in nodes]
     logging.debug("Nodes: %s Edges: %s" % (len(nodes), len(edges)))
-    json_dump({"nodes": nodes, "links": edges}, "graph")
+    update_datafile({"nodes": nodes, "links": edges}, "graph.json")
 
 
 def build_supergraph(policy):
@@ -397,7 +404,7 @@ def build_supergraph(policy):
     nodes = [{"name": n, "type": n} for n in nodes]
 
     logging.debug("Nodes: %s Edges: %s" % (len(nodes), len(edges)))
-    json_dump({"nodes": nodes, "links": edges}, "graph")
+    update_datafile({"nodes": nodes, "links": edges}, "superGraph.json")
 
 
 def build_hive(policy):
@@ -419,7 +426,7 @@ def build_hive(policy):
     for edge in edges:
         edge["imports"] = edge["target"]
 
-    json_dump([n[k] for k in n.keys()], "hive")
+    update_datafile([n[k] for k in n.keys()], "hive.json")
 
 
 def build_chord(policy):
@@ -486,7 +493,7 @@ def build_tree(root_class):
                     tgt_node = TreeNode(target, perm, "type")
                     perm_node["children"].append(tgt_node)
 
-    json_dump(root, "sepol")
+    update_datafile(root, "sepol.json")
 
 
 def create_visual(policy, args):
@@ -509,7 +516,6 @@ def create_visual(policy, args):
 def index_from_template(layout):
     with open("templates/index.html", "r") as fin, open("index.html", "w") as fout:
         text = fin.read()
-        text = text % (layout, layout)
         fout.write(text)
 
 

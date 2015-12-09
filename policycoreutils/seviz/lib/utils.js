@@ -1,18 +1,15 @@
-/*
-    Src: http://james.padolsey.com/javascript/get-document-height-cross-browser/
-    From JQuery implmentation:
-    https://github.com/jquery/jquery/blob/29370190605ed5ddf5d0371c6ad886a4a4b5e0f9/src/dimensions.js
- */
-function windowWidth() {
-    return Math.max(
-        document.documentElement["clientWidth"], document.body["scrollWidth"],
-        document.documentElement["scrollWidth"], document.body["offsetWidth"],
-        document.documentElement["offsetWidth"], document.body["scrollWidth"]);
+function loadScript(s) {
+    var script = document.createElement("script");
+    script.setAttribute("type", "text/javascript");
+    script.setAttribute("src", "layout/" + s + ".js");
+    document.getElementById("scripts").appendChild(script);
 }
 
-function windowHeight() {
-    return Math.max(
-        document.documentElement["clientHeight"], document.body["scrollHeight"],
-        document.documentElement["scrollHeight"], document.body["offsetHeight"],
-        document.documentElement["offsetHeight"], document.body["scrollHeight"]);
+
+function loadStyle(s) {
+    var script = document.createElement("link");
+    script.setAttribute("rel", "stylesheet");
+    script.setAttribute("type", "text/css");
+    script.setAttribute("href", "css/" + s + ".css");
+    document.getElementById("styles").appendChild(script);
 }

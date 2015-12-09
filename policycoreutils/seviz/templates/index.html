@@ -3,60 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>SEViz</title>
-    <script type="text/javascript" src="lib/d3/d3.js"></script>
-    <script type="text/javascript" src="lib/d3/d3.hive.min.js"></script>
-    <script type="text/javascript" src="lib/utils.js"></script>
-    <script type="text/javascript" src="lib/globals.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/%s.css">
+    <div id="styles"></div>
 </head>
 <body>
-    <script type="text/javascript">
-    	function backButtonClick(){
-            var node = nodeStack.pop();
-            if(node == undefined){
-    		  //drawGraph(root);
-              //currentNode = root;
-              alert(1);
-              return;
-            }
-            //drawGraph(node);
-            //currentNode = node;
-    	}
-
-    	function changeHandler(){
-            var d = document.getElementById("navDropDown");
-            var val = d[d.selectedIndex].value;
-            //drawGraph(val);
-            //nodeStack.push(currentNode);
-            //currentNode = val;
-    	}
-    </script>
-    <div id="meta-data">
-    </div>
     <div id="ui-control">
-    	<button id="backButton" class="navButton" onclick="backButtonClick()" style="visibility:hidden">&#8592</button>
-    	<select id="navDropDown" onchange="changeHandler()" style="visibility:hidden">
-    		<option value="-1">Select a Node</option>
-            <!--<option value='{"a":1, "b":2}'>test opt</option>-->
+        <select id="fileDropDown" onchange="handleFileChoice(this.value)">
+            <option value="-1">Select a data file</option>
+        </select>
+        <select id="optionalDropDown" onchange="handleOptionalChoice(this.value)">
+            <option value="-1">Optional data file</option>
+        </select>
+        <select id="layoutDropDown" onchange="handleLayoutChoice(this.value)">
+            <option value="-1">Select a layout</option>
+        </select>
+    	<select id="classDropDown" onchange="handleClassChoice(this.value)" style="visibility:hidden">
+    		<option value="-1">Select a class</option>
     	</select>
-    </br>
-    <!--
-    NOTE: details tag only supported in Chrome Safari and Opera, may want to replace with a different tag
-    -->
-    <details open="true">
-    	<summary>Selected Node Data</summary>
-    	<p id="nodeDetails">so much more data to go here!</p>
-    </details>
+        <select id="typeDropDown" onchange="handleTypeChoice(this.value)" style="visibility:hidden">
+            <option value="-1">Select a type</option>
+        </select>
+        </br>
     </div>
+
     <div id="data-viz">
+        <!-- This will be the location of the SVG -->
     </div>
-    <script type="text/javascript" src="layout/%s.js"></script>
-    <script type="text/javascript">
-        (function(){
-        //unhide user controls
-            document.getElementById("backButton").style.visibility = "";
-            document.getElementById("navDropDown").style.visibility = "";
-    })();
-    </script>
+
+    <div id="meta-data">
+        <!-- This will be the location of the meta-data, if any -->
+    </div>
+
+    <div id="scripts">
+        <script type="text/javascript" defer src="lib/d3/d3.js"></script>
+        <script type="text/javascript" defer src="lib/d3/d3.hive.min.js"></script>
+        <script type="text/javascript" defer src="lib/globals.js"></script>
+        <script type="text/javascript" defer src="lib/utils.js"></script>
+        <script type="text/javascript" defer src="lib/ui.js"></script>
+        <script type="text/javascript" defer src="lib/data.js"></script>
+        <script type="text/javascript" defer src="lib/main.js"></script>
+    </div>
 </body>
 </html>
