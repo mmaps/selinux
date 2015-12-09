@@ -16,10 +16,14 @@ function handleLayoutChoice(choice) {
         loadScript(choice);
         loadStyle(choice);
         loaded.push(choice);
+    } else {
+        updateLayout();
     }
 }
 
 function updateLayout() {
+    console.log("Updating current layout");
+    initSVG();
     layout = layoutMap[currentLayout];
 }
 

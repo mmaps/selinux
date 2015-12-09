@@ -105,6 +105,8 @@ var zoomHandler = d3.behavior.zoom()
     });
 
 function initSVG() {
+    d3.select("#data-viz").selectAll("*").remove();
+
     d3.select("#data-viz").append("svg")
         .attr("width", width)
         .attr("height", height);
