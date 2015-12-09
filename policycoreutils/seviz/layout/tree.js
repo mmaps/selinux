@@ -51,10 +51,7 @@ var TreeChart = function() {
         });
   }
 
-
-
   function redraw(currentRoot) {
-    //tree.size([height, width]);
 
     var nodes = tree.nodes(data);
     var links = tree.links(nodes);
@@ -213,24 +210,6 @@ var TreeChart = function() {
   return chart;
 };
 
-function treeFromClass(className) {
-  d3.json("data/sepol.json", function (error, data) {
-    if (error) throw error;
-
-    var treeData = null;
-    var treeChart = TreeChart();
-
-    for (var i = 0; i < data.children.length; i++) {
-      if (data.children[i].name === className) {
-        treeData = data.children[i];
-        break;
-      }
-    }
-
-    treeChart(treeData);
-  });
-}
-
 if(layoutMap) {
   console.log("Registering tree layout");
   layoutMap["tree"] = TreeChart();
@@ -239,5 +218,3 @@ if(layoutMap) {
 } else {
   console.log("Tree is not registered");
 }
-
-//treeFromClass("process");
