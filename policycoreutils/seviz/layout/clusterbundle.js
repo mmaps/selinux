@@ -2,24 +2,30 @@ var ClusterBundleChart = function () {
     var chartData,
         cluster,
         bundle,
-    //diameter = 0.85 * Math.min(height, width),
         diameter = Math.max(document.documentElement.clientWidth,
             document.documentElement.clientHeight),
         radius = diameter / 2,
         innerRadius = radius - 120,
         line,
-        tension = 0.75,
+        tension = .75,
         nodes,
+        svgNodes,
         links,
+        svgLinks,
         nodeMap = {};
 
     function chart(data) {
-        chartData = data;
-        initCluster(data);
+        initCluster();
         draw(data);
     }
 
-    function initCluster(data) {
+    function initCluster() {
+        svg.selectAll(".link").remove();
+        svg.selectAll(".node").remove();
+        chartData = {};
+        nodeMap = {};
+        nodes = links = svgLinks = svgNodes = null;
+
         cluster = d3.layout.cluster()
             .size([360, innerRadius])
             .sort(null)
@@ -43,19 +49,20 @@ var ClusterBundleChart = function () {
     }
 
     function draw(currentRoot) {
-        chartData = mungeData(currentRoot);
-        nodes = cluster.nodes(chartData);
+        chartData = currentRoot;
+        var data = mungeData(currentRoot);
+        nodes = cluster.nodes(data);
         nodeMap = mapD3Nodes(nodes);
-        links = enumerateEdges(nodes);
+        links = enumerateEdges();
 
-        svg.selectAll(".link")
+        svgLinks = svg.selectAll(".link")
             .data(bundle(links))
             .enter()
             .append("path")
             .attr("class", "link")
             .attr("d", line);
 
-        svg.selectAll(".node")
+        svgNodes = svg.selectAll(".node")
             .data(nodes)
             .enter()
             .append("g")
@@ -64,6 +71,7 @@ var ClusterBundleChart = function () {
                 return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")";
             })
             .append("text")
+            .attr("class", "label")
             .attr("dx", function (d) {
                 return d.x < 180 ? 8 : -8;
             })
@@ -77,9 +85,70 @@ var ClusterBundleChart = function () {
             .text(function (d) {
                 return d.name;
             });
+
+        svg.selectAll(".node")
+            .on("mouseover", handleMouseOver)
+            .on("mouseout", handleMouseOut);
     }
 
     function mungeData(rootNode) {
+        if (rootNode.nodeType) {
+            console.log("Munging type: " + rootNode.nodeType);
+            if (rootNode.nodeType === "class") {
+                return mungeClass(rootNode);
+            } else if (rootNode.nodeType === "type") {
+                return mungeType(rootNode);
+            }
+        } else {
+            console.log("Unknown type for " + rootNode.name);
+        }
+    }
+
+    function mungeType(rootNode) {
+        var data = {
+                name: rootNode.name,
+                clusterType: "root",
+                nodeType: "type",
+                children: [],
+                parent: "null"
+            },
+            permissions = [],
+            targets = [],
+            seen = {};
+
+        rootNode.children.forEach(function (permission) {
+            var p = {
+                name: permission.name,
+                nodeType: permission.nodeType,
+                children: [],
+                parent: data.name
+            };
+            permissions.push(p);
+
+            permission.children.forEach(function (target) {
+                if (!seen[target.name]) {
+                    targets.push(target);
+                    seen[target.name] = true;
+                }
+            });
+        });
+
+        data.children.push({
+            name: "targets",
+            children: targets,
+            parent: rootNode.name
+        });
+
+        data.children.push({
+            name: "permissions",
+            children: permissions,
+            parent: rootNode.name
+        });
+
+        return data;
+    }
+
+    function mungeClass(rootNode) {
         var data = {"name": rootNode.name, "parent": "null", "children": []},
             seen = {};
 
@@ -95,7 +164,6 @@ var ClusterBundleChart = function () {
             source.children.forEach(function (permission) {
                 permission.children.forEach(function (target) {
                     if (!seen[target.name]) {
-                        console.log("\t\t" + target.name);
                         var tgt = {
                             name: target.name,
                             parent: rootNode.name,
@@ -109,12 +177,6 @@ var ClusterBundleChart = function () {
             });
         });
 
-        n = [];
-        rootNode.children.forEach(function (c) {
-            n.push(c.name);
-        });
-        console.log(n.join());
-
         return data;
     }
 
@@ -122,27 +184,65 @@ var ClusterBundleChart = function () {
         var nMap = {};
 
         nodes.forEach(function (n) {
-            nMap[n.name] = n;
+            if (!nMap[n.name]) {
+                nMap[n.name] = n;
+            }
         });
 
         return nMap;
     }
 
-    function enumerateEdges(nodes) {
-        var edges = [];
+    function enumerateEdges() {
+        if (chartData.nodeType === "class") {
+            return enumerateClassEdges();
+        } else if (chartData.nodeType === "type") {
+            return enumerateTypeEdges();
+        }
+    }
 
-        nodes.forEach(function (n) {
-            if (n.children) {
-                n.children.forEach(function (c) {
-                    var edge = {};
-                    edge.source = nodeMap[n.name];
-                    edge.target = nodeMap[c.name];
-                    edges.push(edge);
+    function enumerateTypeEdges() {
+        var edges = [],
+            source = chartData;
+
+        source.children.forEach(function (permission) {
+            permission.children.forEach(function (target) {
+                edges.push({
+                    source: nodeMap[permission.name],
+                    target: nodeMap[target.name]
                 });
-            }
+            });
         });
 
         return edges;
+    }
+
+    function enumerateClassEdges() {
+
+    }
+
+    function handleMouseOver(node) {
+        var highlight = {};
+        var source, target;
+
+        svgLinks.classed("highlightLink", function (l) {
+            source = l[0].name;
+            target = l[l.length - 1].name;
+            if (source === node.name || target === node.name) {
+                highlight[source] = true;
+                highlight[target] = true;
+                return true;
+            }
+            return false;
+        });
+
+        svgNodes.classed("highlightNode", function (n) {
+            return !!highlight[n.name];
+        });
+    }
+
+    function handleMouseOut(node) {
+        svgLinks.classed("highlightLink", false);
+        svgNodes.classed("highlightNode", false);
     }
 
     return chart;

@@ -45,6 +45,8 @@ var TreeChart = function() {
   }
 
   function initTree(data) {
+    svg.selectAll(".link").remove();
+    svg.selectAll(".node").remove();
     data.x0 = height / 2;
     data.y0 = 10;
     tree = d3.layout.tree()

@@ -44,7 +44,10 @@ function walkClassesTypes(data, tag) {
             seenType[data.name] = true;
         }
     }
-    data.children.forEach(walkClassesTypes);
+
+    for (var i = 0; i < data.children.length; i++) {
+        walkClassesTypes(data.children[i]);
+    }
 }
 
 

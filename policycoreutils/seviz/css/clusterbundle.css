@@ -1,10 +1,9 @@
-.node {
-  font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  fill: #bbb;
+.label {
+    font-size: 2em;
 }
 
-.node:hover {
-  fill: #000;
+.label:hover {
+    font-size: 3em;
 }
 
 .link {
@@ -14,30 +13,14 @@
   pointer-events: none;
 }
 
-.node:hover,
-.node--source,
-.node--target {
-  font-weight: 700;
+.highlightNode {
+    fill: red;
+    font-size: 5em;
+    stroke: red;
 }
 
-.node--source {
-  fill: #2ca02c;
+.highlightLink {
+    stroke: red;
+    stroke-opacity: .85;
 }
 
-.node--target {
-  fill: #d62728;
-}
-
-.link--source,
-.link--target {
-  stroke-opacity: 1;
-  stroke-width: 2px;
-}
-
-.link--source {
-  stroke: #d62728;
-}
-
-.link--target {
-  stroke: #2ca02c;
-}
