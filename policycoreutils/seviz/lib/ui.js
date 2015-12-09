@@ -21,9 +21,7 @@ var googleR = "#D40F25",
 
 function initFileMenu() {
     var option,
-        option2,
-        menu = document.getElementById("fileDropDown"),
-        menu2 = document.getElementById("optionalDropDown");
+        menu = document.getElementById("fileDropDown");
 
     menu.style.visibility = "";
 
@@ -32,11 +30,8 @@ function initFileMenu() {
 
         data.forEach(function(dataFile) {
             option = document.createElement("option");
-            option2 = document.createElement("option");
             option.text = option.value = dataFile;
-            option2.text = option2.value = dataFile;
             menu.appendChild(option);
-            menu2.appendChild(option2);
         });
     });
 }
