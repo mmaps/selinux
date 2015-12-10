@@ -10,11 +10,44 @@ Check out the [quick demo video](https://youtu.be/f4BzWfzk5uQ)
 
 Dependencies
 ------------
-* m4: Used in python script
-* D3JS: Used by JavaScript
+* m4: Used in Python script
+* D3JS: Used for visualization (this is bundled with the JavaScript)
+
+Example
+-------
+0. Make sure you have m4 installed.
+```
+# apt-get install m4
+```
+
+1. Assuming we are in your home directory, make a working directory to put the project in:
+```
+$ mkdir selinux-example
+$ cd selinux-example
+```
+2. Clone the [Android platform SELinux platform](https://android.googlesource.com/platform/external/sepolicy)
+```
+$ git clone https://android.googlesource.com/platform/external/sepolicy
+```
+
+3. Clone this repository
+```
+$ git clone https://github.com/mmaps/selinux
+```
+
+3. Jump to this program
+```
+$ cd selinux/policycoreutils/seviz
+```
+
+4. Run the parser to generate a JSON data file and layout. The target directory is the one cloned in step 1.
+```
+$ python seviz.py -l tree ~/selinux-example/sepolicy
+```
 
 Usage
 -----
+Because seviz uses relative paths to insert the SELinux projects policy parser and model, you should run the program from within its own directory. This is an issue to be fixed.
 ```
 usage: seviz.py [-h] [-d] [-b BOARD_DIR] [-c SECLASS] [-l LAYOUT]
                 [-o OUTPUT] [-p PORT] [-w]
