@@ -16,7 +16,7 @@ Dependencies
 Example
 -------
 1. Make sure you have m4 installed.
-* ```# apt-get install m4 ```
+  * ```# apt-get install m4 ```
 2. Assuming we are in your home directory, make a working directory to put the project in:
 ```
 $ mkdir selinux-example
