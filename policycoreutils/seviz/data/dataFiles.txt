@@ -1,9 +1,3 @@
 [
-    "newoutput.json", 
-    "output.json", 
-    "sepol.json", 
-    "shamu.json", 
-    "latest.json", 
-    "default.json", 
-    "new.json"
+    "sepol.json"
 ]
