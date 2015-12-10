@@ -16,10 +16,7 @@ Dependencies
 Example
 -------
 1. Make sure you have m4 installed.
-```
-# apt-get install m4
-```
-
+* ```# apt-get install m4 ```
 2. Assuming we are in your home directory, make a working directory to put the project in:
 ```
 $ mkdir selinux-example
@@ -29,22 +26,18 @@ $ cd selinux-example
 ```
 $ git clone https://android.googlesource.com/platform/external/sepolicy
 ```
-
 4. Clone this repository
 ```
 $ git clone https://github.com/mmaps/selinux
 ```
-
 5. Jump to this program
 ```
 $ cd selinux/policycoreutils/seviz
 ```
-
 6. Run the parser to generate a JSON data file and layout. The target directory is the one cloned in step 1.
 ```
 $ python seviz.py -l tree ~/selinux-example/sepolicy
 ```
-
 7. Open your web browser to ```http://localhost:8000```
 
 
