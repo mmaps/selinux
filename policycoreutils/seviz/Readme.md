@@ -10,7 +10,7 @@ Check out the [quick demo video](https://youtu.be/f4BzWfzk5uQ)
 
 Dependencies
 ------------
-* m4: Used in python script
+* m4: Used in python script - apt-get install m4
 * D3JS: Used by JavaScript
 
 Usage
