@@ -19,3 +19,7 @@
     font-size: .65em;
     fill: #666666;
 }
+
+.label:hover {
+    font-size: 1em;
+}

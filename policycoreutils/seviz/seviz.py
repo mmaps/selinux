@@ -487,14 +487,15 @@ def build_tree(args):
         for type_ in classes[class_]["types"]:
             type_node = TreeNode(type_, class_node["name"], "type")
             class_node["children"].append(type_node)
-
             for perm in types[type_]["permissions"]:
                 perm_node = TreeNode(perm, type_, "permission")
                 type_node["children"].append(perm_node)
-
+                seen_targets = set()
                 for target in types[type_]["permissions"][perm]:
-                    tgt_node = TreeNode(target, perm, "type")
-                    perm_node["children"].append(tgt_node)
+                    if target not in seen_targets:
+                        tgt_node = TreeNode(target, perm, "type")
+                        perm_node["children"].append(tgt_node)
+                        seen_targets.add(target)
     update_datafile(root, args.output)
 
 

@@ -11,20 +11,23 @@ function handleOptionalChoice(choice) {
 }
 
 function handleLayoutChoice(choice) {
-    currentLayout = choice;
     if (loaded.indexOf(choice) < 0) {
         loadScript(choice);
+        disableStyles();
         loadStyle(choice);
         loaded.push(choice);
     } else {
-        updateLayout();
+        disableStyles();
+        enableStyle(choice);
+        currentLayout = choice;
+        updateLayout(choice);
     }
 }
 
-function updateLayout() {
-    console.log("Updating current layout");
+function updateLayout(l) {
+    console.log("Updating current layout: " + l);
+    layout = layoutMap[l];
     initSVG();
-    layout = layoutMap[currentLayout];
 }
 
 function handleClassChoice(choice) {

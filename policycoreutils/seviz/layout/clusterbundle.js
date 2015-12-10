@@ -124,13 +124,16 @@ var ClusterBundleChart = function () {
                 parent: data.name
             };
             permissions.push(p);
-
-            permission.children.forEach(function (target) {
-                if (!seen[target.name]) {
-                    targets.push(target);
-                    seen[target.name] = true;
-                }
-            });
+            if (permission.children) {
+                permission.children.forEach(function (target) {
+                    if (!seen[target.name]) {
+                        targets.push(target);
+                        seen[target.name] = true;
+                    }
+                });
+            } else {
+                permission.children = [];
+            }
         });
 
         data.children.push({
@@ -252,7 +255,7 @@ if (layoutMap) {
     console.log("Registering cluster layout");
     layoutMap["clusterbundle"] = ClusterBundleChart();
     console.log("Updating layout");
-    updateLayout();
+    updateLayout("clusterbundle");
 } else {
     console.log("Cluster is not registered");
 }
