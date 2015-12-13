@@ -55,14 +55,15 @@ attr_map = {}
 
 def parse_cli_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("policy_dir", help="Directory containing policy source files")
     parser.add_argument("-d", "--debug", action="store_true", help="Debugging output")
     parser.add_argument("-b", "--board_dir", help="Parse additional board files in given dir", default="")
     parser.add_argument("-c", "--seclass", help="The class of types to display in layout", default="process")
     parser.add_argument("-l", "--layout", help="Specify the layout for the visualization", default="graph")
     parser.add_argument("-o", "--output", help="Output file name for sepolicy data. Default = 'sepol.json'", default="sepol.json")
     parser.add_argument("-p", "--port", help="Port number for local web server", default=8000, type=int)
-    parser.add_argument("-w", "--web", help="Disable the webserver to serve viz", default=True, action="store_false")
+    parser.add_argument("-w", "--web", help="Disable the webserver that serves pretty pictures", default=True,
+                        action="store_false")
+    parser.add_argument("-y", "--policy_dir", help="Directory containing policy source files", default="")
     return parser.parse_args()
 
 
@@ -127,7 +128,8 @@ def preprocess(default_dir, board_dir):
     rv += read_attributes(board_dir)
     file_seq.extend(order_files(default_dir, board_dir))
     logging.debug("Preprocess file sequence:\n\t%s" % "\n\t".join(file_seq))
-    rv += expand_macros(file_seq)
+    if file_seq:
+        rv += expand_macros(file_seq)
     return rv
 
 
@@ -583,37 +585,40 @@ def main(args):
     Start by ordering the files in the policy and board directories.
     Then expand the macros with m4.
     """
-    expanded = preprocess(args.policy_dir, args.board_dir)
-    if args.debug:
-        try:
-            with open("seviz-expansions.te", "w") as fout:
-                fout.write(expanded)
-        except (IOError, OSError) as e:
-            logging.warn("Could not write debug file: %s" % e)
-    """
-    Clean up trailing semi-colons
-    """
-    expanded = sanitize_expansions(expanded)
+    if args.policy_dir:
+        expanded = preprocess(args.policy_dir, args.board_dir)
+        if expanded and args.debug:
+            try:
+                with open("seviz-expansions.te", "w") as fout:
+                    fout.write(expanded)
+            except (IOError, OSError) as e:
+                logging.warn("Could not write debug file: %s" % e)
 
-    """
-    Parse the macro expanded data
-    """
-    policy = policy_from_source(expanded)
-    if not policy:
-        logging.error("Parsing returned empty result")
-        sys.exit(1)
+        if expanded:
+            """
+            Clean up trailing semi-colons
+            """
+            expanded = sanitize_expansions(expanded)
 
-    """
-    Create data sources from policy model
-    """
-    create_maps(policy)
-    if args.debug:
-        dump_maps()
+            """
+            Parse the macro expanded data
+            """
+            policy = policy_from_source(expanded)
+            if not policy:
+                logging.error("Parsing returned empty result")
+                sys.exit(1)
 
-    """
-    Create visual transforms model data into the correct json output for a particular layout
-    """
-    create_visual(policy, args)
+            """
+            Create data sources from policy model
+            """
+            create_maps(policy)
+            if args.debug:
+                dump_maps()
+
+            """
+            Create visual transforms model data into the correct json output for a particular layout
+            """
+            create_visual(policy, args)
 
     """
     Create the root index.html in the working directory for a particular layout
