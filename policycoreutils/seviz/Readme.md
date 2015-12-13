@@ -21,13 +21,15 @@ Example
   * ```$ mkdir selinux-example```
   * ```$ cd selinux-example```
 3. Clone the [Android platform SELinux platform](https://android.googlesource.com/platform/external/sepolicy)
-  * ```$ git clone https://android.googlesource.com/platform/external/sepolicy ```
+  * ```$ git clone https://android.googlesource.com/platform/external/sepolicy```
 4. Clone this repository
   * ```$ git clone https://github.com/mmaps/selinux```
 5. Jump to this program
   * ```$ cd selinux/policycoreutils/seviz```
 6. Run the parser to generate a JSON data file and layout. The target directory is the one cloned in step 1.
-  * ```$ python seviz.py -l tree ~/selinux-example/sepolicy```
+  * ```$ python seviz.py -l tree -y ~/selinux-example/sepolicy```
+  * Or run just the seviz module to start the webserver for previously generated data sets
+  * ```$ python seviz.py```
 7. Open your web browser to: ```http://localhost:8000```
 
 
@@ -35,12 +37,8 @@ Usage
 -----
 Because seviz uses relative paths to insert the SELinux projects policy parser and model, you should run the program from within its own directory. This is an issue to be fixed.
 ```
-usage: seviz.py [-h] [-d] [-b BOARD_DIR] [-c SECLASS] [-l LAYOUT]
-                [-o OUTPUT] [-p PORT] [-w]
-                policy_dir
-
-positional arguments:
-  policy_dir            Directory containing policy source files
+usage: seviz.py [-h] [-d] [-b BOARD_DIR] [-c SECLASS] [-l LAYOUT] [-o OUTPUT]
+                [-p PORT] [-w] [-y POLICY_DIR]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -55,7 +53,9 @@ optional arguments:
                         Output file name for sepolicy data. Default =
                         'sepol.json'
   -p PORT, --port PORT  Port number for local web server
-  -w, --web             Disable the webserver to serve viz
+  -w, --web             Disable the webserver that serves pretty pictures
+  -y POLICY_DIR, --policy_dir POLICY_DIR
+                        Directory containing policy source files
 ```
 
 References
