@@ -10,6 +10,7 @@ Check out the [quick demo video](https://youtu.be/f4BzWfzk5uQ)
 
 Dependencies
 ------------
+* python-selinux or libselinux-python: Python bindings to the selinux libs
 * m4: Used in Python script
 * D3JS: Used for visualization (this is bundled with the JavaScript)
 
@@ -21,7 +22,7 @@ Example
   * ```$ mkdir selinux-example```
   * ```$ cd selinux-example```
 3. Clone the [Android platform SELinux platform](https://android.googlesource.com/platform/external/sepolicy)
-  * ```$ git clone https://android.googlesource.com/platform/external/sepolicy```
+  * ```$ git clone https://android.googlesource.com/platform/system/sepolicy```
 4. Clone this repository
   * ```$ git clone https://github.com/mmaps/selinux```
 5. Jump to this program
